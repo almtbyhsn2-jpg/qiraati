@@ -1,0 +1,1449 @@
+<meta charset="utf-8">
+<title>قراءتي – الصف الثالث</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#0b1030">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&family=Reem+Kufi:wght@500;700&family=Amiri:wght@400;700&display=swap">
+<style>
+@property --c1{syntax:'<color>';inherits:true;initial-value:#0b1030}
+@property --c2{syntax:'<color>';inherits:true;initial-value:#3a2a8c}
+@property --c3{syntax:'<color>';inherits:true;initial-value:#ff8a3d}
+:root{--ink:#f4f7ff;--mut:rgba(244,247,255,.72);--glass:rgba(255,255,255,.08);--bd:rgba(255,255,255,.2);--okc:#3ee6a8;--noc:#ff5d73;--yel:#ffcf4a;--bg:#0b1030;color-scheme:dark}
+[data-u="0"]{--c1:#0b1030;--c2:#3a2a8c;--c3:#ff8a3d}
+[data-u="1"]{--c1:#08213f;--c2:#1457a6;--c3:#ffb938}
+[data-u="2"]{--c1:#2a0a17;--c2:#8a2347;--c3:#f3c98b}
+[data-u="3"]{--c1:#062a26;--c2:#0f6b5c;--c3:#7dffd0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);background:var(--c1);color:var(--ink);font-family:Cairo,Tahoma,"Segoe UI",sans-serif;font-size:17px;line-height:1.8;transition:--c1 .9s,--c2 .9s,--c3 .9s;overflow-x:hidden;padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:-10%;z-index:-2;background:radial-gradient(60% 50% at 85% 5%,var(--c2),transparent 70%),radial-gradient(50% 45% at 5% 40%,color-mix(in srgb,var(--c3) 36%,transparent),transparent 70%),radial-gradient(70% 50% at 50% 105%,var(--c2),transparent 70%);animation:drift 24s ease-in-out infinite alternate}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@keyframes drift{to{transform:translate3d(-3%,2%,0) scale(1.08)}}
+button{font-family:inherit;color:inherit}
+button:focus-visible{outline:3px solid var(--c3);outline-offset:3px}
+svg{display:block}img{max-width:100%}
+.top{position:fixed;z-index:30;top:calc(10px + env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));max-width:640px;margin-inline:auto;display:flex;align-items:center;gap:8px;padding:7px 8px 7px 16px;border-radius:999px;background:rgba(10,14,40,.5);border:1px solid var(--bd);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.logo{flex:1;font:700 26px/1 "Reem Kufi",Cairo,sans-serif}
+.hp{display:flex;align-items:center;gap:6px;font-weight:700;font-size:15px;padding:3px 12px 3px 6px;border-radius:999px;background:var(--glass);border:1px solid var(--bd)}
+.hp svg{color:var(--c3)}
+.ring{--p:0%;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;position:relative;background:conic-gradient(var(--c3) var(--p),rgba(255,255,255,.18) 0);font-size:12px;transition:background .6s}
+.ring::before{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--c1)}
+.ring b{position:relative}
+.snb{width:38px;height:38px;border-radius:50%;border:1px solid var(--bd);background:var(--glass);display:grid;place-items:center;cursor:pointer}
+.dock{position:fixed;z-index:30;bottom:calc(12px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);display:flex;padding:6px;border-radius:999px;background:rgba(10,14,40,.55);border:1px solid var(--bd);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);box-shadow:0 20px 50px -10px rgba(0,0,0,.6)}
+.dock button{position:relative;z-index:1;width:74px;height:56px;border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:12px;font-weight:700;color:var(--mut);cursor:pointer;transition:color .3s}
+.dock button svg{transition:transform .4s cubic-bezier(.3,1.5,.4,1)}
+.dock button.on{color:#fff}.dock button.on svg{transform:translateY(-2px) scale(1.15)}
+.bub{position:absolute;top:6px;bottom:6px;left:0;width:74px;border-radius:999px;background:linear-gradient(180deg,color-mix(in srgb,var(--c3) 36%,transparent),color-mix(in srgb,var(--c3) 10%,transparent));border:1px solid color-mix(in srgb,var(--c3) 60%,transparent);box-shadow:0 0 28px color-mix(in srgb,var(--c3) 45%,transparent);transform:translateX(var(--bx,0px));transition:transform .55s cubic-bezier(.3,1.35,.4,1);overflow:hidden}
+.bub::after{content:"";position:absolute;left:24%;right:24%;top:0;height:2px;border-radius:2px;background:var(--c3);box-shadow:0 0 12px var(--c3)}
+.view{display:none;min-height:100svh;padding:calc(92px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-left,0px)) 130px max(16px,env(safe-area-inset-right,0px))}
+.view.on{display:block;animation:vin .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes vin{from{opacity:0;transform:translateY(16px)}}
+.wrap{max-width:680px;margin:0 auto}
+.pt{display:inline-block;padding:2px 16px;border-radius:999px;border:1px solid var(--bd);background:var(--glass);font-weight:700;font-size:14px;color:var(--c3)}
+.big-n{font:700 clamp(150px,52vw,300px)/.85 "Reem Kufi",Cairo,sans-serif;margin:0;text-align:center;background:linear-gradient(180deg,#fff 25%,color-mix(in srgb,var(--c3) 75%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 10px 60px color-mix(in srgb,var(--c3) 50%,transparent));animation:flo 6s ease-in-out infinite alternate}
+@keyframes flo{to{transform:translateY(-10px) rotate(-2deg)}}
+.hero{text-align:center}
+.hero h1{margin:0;font:700 clamp(40px,11vw,64px)/1.2 "Reem Kufi",Cairo,sans-serif}
+.hero p{margin:0;color:var(--mut);font-size:18px}
+h2.t{margin:8px 0 2px;font:700 clamp(38px,10vw,58px)/1.15 "Reem Kufi",Cairo,sans-serif}
+.lead{margin:0 0 14px;color:var(--mut);font-size:17px}
+.glass{border:1px solid var(--bd);background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border-radius:26px;box-shadow:0 18px 50px -20px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.28)}
+.goal{display:flex;align-items:center;gap:16px;padding:16px 18px;margin-top:18px;text-align:right}
+.goal .ring{width:62px;height:62px;font-size:20px}.goal .ring::before{inset:6px}
+.goal h3{margin:0;font-size:19px}.goal p{margin:0;font-size:14px;color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stat{padding:12px 6px;text-align:center}
+.stat b{display:block;font:700 30px/1.1 "Reem Kufi",Cairo,sans-serif;color:var(--c3)}.stat span{font-size:13px;color:var(--mut)}
+.cta{border:0;border-radius:999px;padding:12px 30px;background:#fff;color:#0b1030;font-weight:900;font-size:19px;cursor:pointer;box-shadow:0 14px 40px -10px color-mix(in srgb,var(--c3) 80%,transparent);transition:transform .2s;display:inline-flex;align-items:center;gap:8px}
+.cta:hover{transform:translateY(-3px)}.cta:active{transform:scale(.97)}
+.cont{display:flex;gap:14px;align-items:center;padding:12px;margin-top:18px;cursor:pointer;text-align:right;width:100%;border:1px solid var(--bd)}
+.cont img{width:96px;height:78px;object-fit:cover;border-radius:18px;flex:none}
+.cont h3{margin:0;font-size:20px;line-height:1.4}.cont p{margin:0;font-size:14px;color:var(--mut)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.chip{border:1px solid var(--bd);background:var(--glass);border-radius:999px;padding:3px 16px;font-weight:700;font-size:15px;cursor:pointer}
+.chip.on{background:var(--c3);color:#0b1030;border-color:transparent}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{position:relative;overflow:hidden;text-align:right;padding:0;display:flex;flex-direction:column;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1);min-height:190px}
+.card:hover{transform:translateY(-5px)}.card:active{transform:scale(.98)}
+.card .im{height:96px;background-size:cover;background-position:center top;position:relative}
+.card .im::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,14,40,.7),transparent 60%)}
+.card .bd{padding:10px 14px 12px;display:flex;flex-direction:column;gap:2px;flex:1}
+.card h3{margin:0;font-size:17px;line-height:1.5}
+.card .pg{font-size:12.5px;color:var(--mut)}
+.card .st{display:flex;gap:4px;align-items:center;font-size:13px;font-weight:700;color:var(--c3);margin-top:auto}
+.card .st.no{color:var(--mut);font-weight:500}
+.tag{position:absolute;top:8px;inset-inline-start:8px;z-index:2;font-size:12px;font-weight:700;padding:0 10px;border-radius:99px;background:rgba(10,14,40,.7);border:1px solid var(--bd)}
+.tag.done{background:var(--okc);color:#04281f;border-color:transparent}
+.big-card{display:flex;align-items:center;gap:14px;padding:16px;margin-bottom:12px;cursor:pointer;text-align:right;width:100%}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;flex:none;color:var(--c3);background:color-mix(in srgb,var(--c3) 22%,transparent);border:1px solid color-mix(in srgb,var(--c3) 55%,transparent)}
+.big-card h3{margin:0;font-size:20px}.big-card p{margin:0;font-size:14px;color:var(--mut)}
+/* overlay */
+.ov{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;background:radial-gradient(70% 45% at 80% 0,var(--c2),transparent 70%),radial-gradient(60% 40% at 0 100%,color-mix(in srgb,var(--c3) 30%,transparent),transparent 70%),var(--c1);transform:translateY(105%);visibility:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1),visibility 0s .5s}
+.ov.on{transform:none;visibility:visible;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#gm{z-index:70}#bk{z-index:75}
+.otop{display:flex;align-items:center;gap:12px;width:100%;max-width:680px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-left,0px)) 8px max(16px,env(safe-area-inset-right,0px))}
+.x{width:40px;height:40px;border-radius:50%;border:1px solid var(--bd);background:var(--glass);display:grid;place-items:center;cursor:pointer;flex:none}
+.otop h2{flex:1;min-width:0;margin:0;font:700 21px/1.3 "Reem Kufi",Cairo,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{flex:0 0 72px;height:10px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--c3),#fff);transition:width .45s}
+.tabs{display:flex;gap:6px;width:100%;max-width:680px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px)) 6px max(16px,env(safe-area-inset-right,0px))}
+.tabs button{flex:1;border:1px solid var(--bd);background:var(--glass);border-radius:16px;padding:4px 2px;font-weight:700;font-size:14.5px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:0;line-height:1.5}
+.tabs button.on{background:var(--c3);color:#0b1030;border-color:transparent}
+.ob{flex:1;overflow:auto;width:100%;max-width:680px;margin:0 auto;padding:8px max(16px,env(safe-area-inset-left,0px)) 150px max(16px,env(safe-area-inset-right,0px))}
+.cover{width:100%;max-height:20vh;object-fit:cover;border-radius:24px;border:2px solid color-mix(in srgb,var(--c3) 55%,transparent);margin-bottom:10px;box-shadow:0 18px 40px -16px rgba(0,0,0,.7)}
+.dots{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0 12px;justify-content:center}
+.dt{width:16px;height:16px;border-radius:50%;border:2px solid var(--bd);background:var(--glass);cursor:pointer;padding:0}
+.dt.cur{border-color:var(--c3);transform:scale(1.25)}
+.dt.ok{background:var(--okc);border-color:var(--okc)}
+.dt.bad{background:var(--noc);border-color:var(--noc)}
+.stage{position:relative;padding:34px 14px 14px;margin-bottom:12px;text-align:center}
+.tl.h{flex-direction:row;width:auto;padding:5px 9px;gap:6px;position:absolute;top:10px;left:10px;border-radius:20px}.tl.h i{width:14px;height:14px}
+.stage .tx,.rd .tx{font:400 clamp(27px,7.2vw,36px)/2.4 Amiri,"Traditional Arabic",serif;word-spacing:2px}
+.w{display:inline-block;padding:0 7px;margin:3px 1px;border-radius:12px;transition:background .25s,color .25s,transform .25s;border:2px solid transparent}
+.w.ok{background:var(--okc);color:#04281f;transform:scale(1.05)}
+.w.bad{background:var(--noc);color:#fff;animation:shake .4s}
+.w.pend{border-color:color-mix(in srgb,var(--c3) 60%,transparent)}
+.w.mask:not(.ok):not(.bad){color:transparent;background:rgba(255,255,255,.14);user-select:none}
+.w.hid{cursor:pointer;color:transparent;background:rgba(255,255,255,.16);border:2px dashed var(--bd)}
+.w.tg{cursor:pointer}
+@keyframes shake{25%{transform:translateX(7px)}75%{transform:translateX(-7px)}}
+.ctl{display:flex;align-items:center;justify-content:center;gap:9px;margin:8px 0}
+.mic{position:relative;width:92px;height:92px;border-radius:50%;border:0;background:linear-gradient(160deg,var(--c3),color-mix(in srgb,var(--c3) 55%,var(--c2)));color:#0b1030;display:grid;place-items:center;cursor:pointer;box-shadow:0 18px 40px -10px color-mix(in srgb,var(--c3) 80%,transparent);transition:transform .2s}
+.mic:active{transform:scale(.94)}
+.mic.rec{background:var(--noc);color:#fff;animation:rec 1.2s ease-in-out infinite}
+@keyframes rec{50%{box-shadow:0 0 0 18px rgba(255,93,115,.18),0 0 0 36px rgba(255,93,115,.08)}}
+.sm{width:48px;height:48px;flex:none;border-radius:50%;border:1px solid var(--bd);background:var(--glass);display:grid;place-items:center;cursor:pointer}
+.sm[disabled]{opacity:.35;pointer-events:none}
+.tl{width:54px;padding:7px;border-radius:30px;background:#10142e;border:2px solid var(--bd);display:flex;flex-direction:column;gap:7px;align-items:center}
+.tl i{width:30px;height:30px;border-radius:50%;background:#2d2f45;transition:background .3s,box-shadow .3s}
+.tl[data-s="r"] .r{background:var(--noc);box-shadow:0 0 22px var(--noc)}
+.tl[data-s="y"] .y{background:var(--yel);box-shadow:0 0 22px var(--yel);animation:blink 1s infinite}
+.tl[data-s="g"] .g{background:var(--okc);box-shadow:0 0 22px var(--okc)}
+@keyframes blink{50%{opacity:.4}}
+.live{min-height:30px;text-align:center;font-size:16px;color:var(--mut);margin:2px 0 6px}
+.live.ok{color:var(--okc);font-weight:700}.live.no{color:#ff9aa8;font-weight:700}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;justify-content:center}
+.big,.ghost{border:0;border-radius:999px;padding:10px 26px;font-weight:900;font-size:19px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;justify-content:center}
+.big{background:#fff;color:#0b1030;box-shadow:0 12px 30px -10px color-mix(in srgb,var(--c3) 80%,transparent)}
+.ghost{background:var(--glass);border:1px solid var(--bd)}
+.big:active,.ghost:active{transform:scale(.97)}
+.big.ok{background:var(--okc);color:#04281f}
+.hint{font-size:21px;font-weight:700;margin:8px 0 12px}
+.q{font:400 clamp(26px,7vw,34px)/2.3 Amiri,serif;margin:6px 0 14px;text-align:center}
+.blank{display:inline-block;min-width:80px;text-align:center;border-bottom:3px solid var(--c3);color:var(--c3)}
+.blank.ok{color:var(--okc);border-color:var(--okc)}
+.ch{margin:5px;padding:4px 20px;border-radius:18px;border:1px solid var(--bd);background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.05));font:700 25px/1.9 Amiri,serif;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.25)}
+.ch:active{transform:translateY(3px);box-shadow:none}
+.ch.ok{background:var(--okc);color:#04281f;border-color:transparent}
+.ch.no{background:var(--noc);color:#fff;border-color:transparent;animation:shake .35s}
+.chs{text-align:center}
+.slot{min-height:84px;border:2px dashed var(--bd);border-radius:22px;padding:8px 14px;margin:6px 0 16px;text-align:center}
+.slot p{margin:2px 0;font:700 24px/2 Amiri,serif;color:var(--okc)}
+.mem{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mc{position:relative;aspect-ratio:1;border:0;background:none;padding:0;perspective:700px;cursor:pointer}
+.mc .in{position:absolute;inset:0;display:block;transition:transform .45s;transform-style:preserve-3d}
+.mc.up .in,.mc.dn .in{transform:rotateY(180deg)}
+.mc .f,.mc .bk{position:absolute;inset:0;display:grid;place-items:center;border-radius:20px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--bd)}
+.mc .f{background:linear-gradient(135deg,var(--c2),color-mix(in srgb,var(--c3) 55%,var(--c2)))}
+.mc .bk{transform:rotateY(180deg);background:rgba(255,255,255,.14);font:700 26px/1.3 Amiri,serif;text-align:center;padding:4px}
+.mc .bk.s{font-size:17px}
+.mc.dn .bk{background:color-mix(in srgb,var(--okc) 30%,transparent);border-color:var(--okc)}
+.pad{position:relative;margin:12px 0;border:1px solid var(--bd);border-radius:24px;background:var(--glass);height:min(300px,42vh);overflow:hidden}
+.pad canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.res{text-align:center;padding:30px 0}
+.res h2{font:700 46px/1.2 "Reem Kufi",Cairo,sans-serif;margin:10px 0 0}
+.res p{margin:0;font-size:22px;font-weight:700;color:var(--c3)}
+.res .tl{margin:0 auto 10px;width:84px;padding:10px;gap:10px}.res .tl i{width:50px;height:50px}
+.wl{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
+.wl span{padding:2px 14px;border-radius:14px;background:color-mix(in srgb,var(--noc) 30%,transparent);border:1px solid var(--noc);font:700 24px/1.8 Amiri,serif}
+.fb{position:fixed;left:0;right:0;bottom:0;z-index:80;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;justify-content:space-between;gap:12px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(10,14,40,.78);border-top:2px solid var(--bd);transform:translateY(110%);transition:transform .3s}
+.fb.on{transform:none}.fb.ok{border-top-color:var(--okc);color:var(--okc)}
+.fb b{font-size:21px}.fb p{margin:0;font-weight:700;color:var(--ink)}
+.fb button{border:0;border-radius:999px;padding:8px 26px;font-weight:900;font-size:18px;background:var(--okc);color:#04281f;cursor:pointer}
+#cf{position:fixed;inset:0;pointer-events:none;z-index:95}
+.khat{padding:14px;margin:12px 0;text-align:center}
+.khat small{display:block;color:var(--c3);font-weight:700}
+.khat .tx{font:700 clamp(24px,6.4vw,31px)/2.2 Amiri,serif}
+.rd{padding:14px}
+.rd p{margin:0 0 6px}
+.lv{display:flex;gap:6px;justify-content:center;margin:6px 0 12px}
+.lv button{width:50px;height:46px;border-radius:14px;border:1px solid var(--bd);background:var(--glass);font-weight:900;font-size:18px;cursor:pointer}
+.lv button.on{background:var(--c3);color:#0b1030}
+.pgimg{display:block;width:100%;border-radius:18px;margin:0 0 14px;border:1px solid var(--bd);background:#fff2;min-height:200px}
+.bkv{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 max(12px,env(safe-area-inset-left,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-right,0px));min-height:0}
+.bkv .fr{flex:1;min-height:0;width:100%;display:flex;justify-content:center;touch-action:pan-y}
+.bkv .fr img{max-height:100%;max-width:100%;object-fit:contain;border-radius:14px;box-shadow:0 20px 60px -20px #000}
+.bkc{display:flex;gap:10px;align-items:center}
+.bkc span{min-width:90px;text-align:center;font-weight:700}
+.sty{position:fixed;z-index:3}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.wrap{max-width:820px}.dock button{width:96px}.bub{width:96px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01s!important}html{scroll-behavior:auto}}
+</style>
+
+<header class="top">
+ <div class="logo">قراءتي</div>
+ <div class="hp" title="النجوم"><span id="si"></span><b id="sn">0</b></div>
+ <div class="hp" title="المستوى"><div class="ring" id="rg"><b id="lv">1</b></div></div>
+ <button class="snb" id="snb" data-snd="toggle" aria-label="الصوت"></button>
+</header>
+
+<main>
+ <section class="view on" id="v0"><div class="wrap hero">
+  <span class="pt" id="pt0">الصف الثالث الابتدائي</span>
+  <div class="big-n" aria-hidden="true">٣</div>
+  <h1>كتاب قراءتي</h1>
+  <p id="sub0"></p>
+  <div id="home"></div>
+ </div></section>
+ <section class="view" id="v1"><div class="wrap"><span class="pt">الدروس</span><h2 class="t">دروس الكتاب</h2><p class="lead">اختر درساً، اقرأ بصوتك، والتطبيق يتابع معك.</p>
+  <div class="row" style="justify-content:flex-start;margin:0 0 12px"><button class="ghost" id="openBook" data-snd="flip"></button></div>
+  <div class="chips" id="chips"></div><div class="grid" id="g1"></div></div></section>
+ <section class="view" id="v2"><div class="wrap"><span class="pt">المحفوظات</span><h2 class="t">أحفظ وأُسمِّع</h2><p class="lead">أناشيد ومحفوظات: خبّئ الكلمات تدريجياً ثم اقرأها من ذاكرتك.</p><div class="grid" id="g2"></div></div></section>
+ <section class="view" id="v3"><div class="wrap"><span class="pt">الألعاب</span><h2 class="t">ألعاب سريعة</h2><p class="lead">ألعاب من كل الكتاب، كل واحدة بصوتها.</p><div id="g3"></div></div></section>
+</main>
+<nav class="dock" id="dock" aria-label="التنقل"><span class="bub" id="bub"></span></nav>
+
+<div class="ov" id="ov" aria-hidden="true" data-u="1">
+ <div class="otop"><button class="x" id="ox" data-snd="back" aria-label="إغلاق"></button><h2 id="ot"></h2><div class="bar"><i id="obar"></i></div></div>
+ <div class="tabs" id="otabs"></div>
+ <div class="ob" id="ob"></div>
+</div>
+<div class="ov" id="gm" aria-hidden="true" data-u="3">
+ <div class="otop"><button class="x" id="gx" data-snd="back" aria-label="إغلاق"></button><div class="bar"><i id="gbar"></i></div></div>
+ <div class="ob" id="gb"></div>
+ <div class="fb" id="fb"></div>
+</div>
+<div class="ov" id="bk" aria-hidden="true" data-u="0">
+ <div class="otop"><button class="x" id="bx" data-snd="back" aria-label="إغلاق"></button><h2 id="bt">الكتاب</h2></div>
+ <div class="bkv"><div class="fr"><img id="bim" alt="صفحة من الكتاب"></div>
+  <div class="bkc"><button class="sm" id="bn2" data-snd="flip" aria-label="التالية"></button><span id="bpg"></span><button class="sm" id="bp2" data-snd="flip" aria-label="السابقة"></button></div></div>
+</div>
+<canvas id="cf"></canvas>
+
+<script>
+var LS=[];
+// batch 1: pages 5-15
+LS.push(
+{id:"quran",t:"ما نحفظ من القرآن الكريم والحديث الشريف",k:"lesson",p:[5,6],ill:6,
+ tx:[
+ "قالَتْ شَيْمَاءُ لأَخِيها: ماذا تَحْفَظُ مِنَ القُرآنِ الكَريمِ يا أَحْمَدُ؟",
+ "قالَ أَحْمَدُ: أَحْفَظُ سُورَةَ الفاتِحَةِ ، وسُورَةَ العَلَقِ ، وسُورَةَ الإِخْلاصِ.",
+ "قالَتْ شَيْمَاءُ: أَسْمِعْنِي قِراءَةَ سُورَةِ الإِخْلاصِ.",
+ "فَبَدَأَ أَحْمَدُ يَقْرَأُ ويَقولُ:",
+ "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+ "قُلْ هُوَ اللَّهُ أَحَدٌ ، اللَّهُ الصَّمَدُ ، لَمْ يَلِدْ وَلَمْ يُولَدْ ، وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+ "قالَتْ شَيْمَاءُ: وما مَعْناها؟",
+ "قالَ أَحْمَدُ: إِنَّ اللَّهَ سُبْحانَهُ وتَعالى واحِدٌ لا شَريكَ لَهُ ، ولا يُنْسَبُ لأَحَدٍ ، وهُوَ الَّذِي نَقْصِدُهُ في الحاجاتِ دائِماً ، وهُوَ مُنَزَّهٌ ليسَ لَهُ مَثيلٌ أَوْ شَبيهٌ.",
+ "قالَتْ شَيْمَاءُ: ما تَحْفَظُ مِنَ الحَديثِ النَّبَوِيِّ الشَّريفِ؟",
+ "قالَ أَحْمَدُ: قالَ النَّبِيُّ مُحَمَّدٌ ﷺ:",
+ "(خَيْرُ الجِيرانِ عِنْدَ اللَّهِ خَيْرُهُمْ لِجارِهِ)",
+ "قالَتْ شَيْمَاءُ: وما مَعْناهُ؟",
+ "قالَ أَحْمَدُ: جِيرانُنا أَقْرَبُ النَّاسِ إِلَيْنا. لِذلِكَ فَإِنَّ النَّبِيَّ يوصينا بِأَنْ نَحْتَرِمَ الجيرانَ ونُساعِدَهُمْ. فَإِذا أَحْبَبْنا جِيرانَنا وساعَدْناهُمْ ، أَحَبُّونا وساعَدونا ، بِذلِكَ نَكونُ أَحْسَنَ الجِيرانِ عِنْدَ اللَّهِ رَبِّنا سُبْحانَهُ وتَعالى؛ فَيَرْضى عَنَّا."
+ ]},
+
+{id:"school",t:"الذَّهابُ إلى المَدْرَسَةِ",k:"lesson",p:[9,10,11,12],ill:9,
+ tx:[
+ "عَبْدُ اللَّهِ يَقولُ:",
+ "أَنا في الصَّفِّ الثَّالِثِ ، أَنْتِ يا نورُ في الصَّفِّ الثَّاني هَيَّا نَذْهَبْ إلى المَدْرَسَةِ.",
+ "قالَتْ نورُ:",
+ "أَنا أُحِبُّ المَدْرَسَةَ ، أُريدُ أَنْ أَرى صَديقاتي ، وأُسَلِّمَ على مُعَلِّمَتي.",
+ "مَشى عَبْدُ اللَّهِ ونورُ في الطَّريقِ إلى المَدْرَسَةِ ، ولَمَّا وَصَلا إلى مِنْطَقَةِ العُبورِ أَرادَ عَبْدُ اللَّهِ أَنْ يَعْبُرَ الشَّارِعَ ، فَقالَتْ نورُ:",
+ "قِفْ يا عَبْدَ اللَّهِ ، انْظُرْ إلى الإِشارَةِ الجانِبِيَّةِ ذاتِ اللَّوْنَيْنِ الضَّوْءُ فيها أَحْمَرُ ، انْتَظِرْ حَتَّى يَصيرَ الضَّوْءُ أَخْضَرَ.",
+ "قالَ عَبْدُ اللَّهِ:",
+ "نَعَمْ. الآنَ صارَ الضَّوْءُ أَخْضَرَ ، هَيَّا نَعْبُرْ يا نورُ.",
+ "عَبَرَ عَبْدُ اللَّهِ ونورُ الشَّارِعَ ، فَوَصَلا إلى المَدْرَسَةِ.",
+ "كانَ التَّلاميذُ في ساحَةِ المَدْرَسَةِ ، وكانَتْ ساحَةُ المَدْرَسَةِ نَظيفَةً.",
+ "سَلَّمَ عَبْدُ اللَّهِ على أَصْدِقائِهِ وسَلَّمَتْ نورُ على صَديقاتِها ، ثُمَّ ذَهَبا إلى المُعَلِّمَةِ وسَلَّما عَلَيْها.",
+ "سَمِعَ التَّلاميذُ صَوْتَ الجَرَسِ يُدَقُّ لِلدَّرْسِ فَدَخَلوا صُفوفَهُمْ فَرِحينَ.",
+ "دَخَلَتِ المُعَلِّمَةُ الصَّفَّ وقالَتْ:",
+ "أَهْلاً بِكُمْ يا أَوْلادي.",
+ "حافِظوا على نَظافَةِ المَدْرَسَةِ.",
+ "قالَ التَّلاميذُ: نَعَمْ ... نَعَمْ ، النَّظافَةُ مِنَ الإيمانِ.",
+ "قالَتِ المُعَلِّمَةُ: هَيَّا نَقْرَأْ ونَتَعَلَّمْ."
+ ]},
+
+{id:"dove",t:"الحَمامَةُ والنَّمْلَةُ",k:"lesson",p:[13,14,15],ill:13,
+ tx:[
+ "عَطِشَتْ حَمامَةٌ فَأَتَتْ غَديرَ ماءٍ تَرْتَوي مِنْهُ ، فَرَأَتْ نَمْلَةً قَدْ سَقَطَتْ في الماءِ وأَشْرَفَتْ على الهَلاكِ.",
+ "فَأَشْفَقَتْ عَلَيْها ، ورَمَتْ إلَيْها وَرَقَةَ شَجَرٍ يابِسَةً ، تَعَلَّقَتْ بِها النَّمْلَةُ ونَجَتْ مِنَ الغَرَقِ.",
+ "وفي اليَوْمِ الثَّاني أَبْصَرَتِ النَّمْلَةُ صَيَّاداً ، يُريدُ أَنْ يَصيدَ الحَمامَةَ فَقالَتْ في نَفْسِها:",
+ "هذا الصَّيَّادُ سَيَقْتُلُ الحَمامَةَ بِالبُنْدُقِيَّةِ ، وهذِهِ الحَمامَةُ أَنْقَذَتْني مِنَ المَوْتِ فَعَلَيَّ أَنْ أَرُدَّ جَميلَها ومَعْروفَها الَّذي أَسْدَتْهُ لي.",
+ "فَدَنَتِ النَّمْلَةُ مِنَ الصَّيَّادِ ولَسَعَتْهُ في رِجْلِهِ ، ولَمَّا الْتَفَتَ وصاحَ مِنَ الأَلَمِ سَمِعَتِ الحَمامَةُ صِياحَهُ فَطارَتْ ونَجَتْ مِنَ المَوْتِ."
+ ],
+ w:[["أَشْرَفَتْ على الهَلاكِ","كادَتْ أَنْ تَموتَ"],["أَسْدَتْهُ","قَدَّمَتْهُ"],["دَنَتْ","اقْتَرَبَتْ"]]},
+
+{id:"week",t:"اليَوْمُ والأُسْبوعُ والشَّهْرُ والسَّنَةُ",k:"expr",p:[8],
+ tx:[
+ "اليَوْمُ الواحِدُ لَيْلٌ ونَهارٌ ، أَرْبَعٌ وعِشْرونَ ساعَةً.",
+ "الأُسْبوعُ سَبْعَةُ أَيَّامٍ هِيَ: السَّبْتُ ، والأَحَدُ ، والاثْنَيْنِ ، والثُّلاثاءُ ، والأَرْبِعاءُ ، والخَميسُ ، والجُمُعَةُ.",
+ "الشَّهْرُ أَرْبَعَةُ أَسابيعَ.",
+ "والشَّهْرُ ثَلاثونَ يَوْماً.",
+ "السَّنَةُ اثْنا عَشَرَ شَهْراً.",
+ "والسَّنَةُ ثَلاثُمِئَةٍ وخَمْسَةٌ وسِتّونَ يَوْماً."
+ ],
+ khat:"خَيْرُ الجيرانِ عِنْدَ اللَّهِ خَيْرُهُمْ لِجارِهِ."}
+);
+// batch 2: pages 16-23
+LS.push(
+{id:"holidays",t:"أَيّامُ العُطَلِ والأَعْيادِ",k:"expr",p:[16],
+ tx:[
+ "لا نَذْهَبُ إلى المَدْرَسَةِ يَوْمَ الجُمُعَةِ ، والعُطْلَةِ الرَّبيعِيَّةِ ، والعُطْلَةِ الصَّيْفِيَّةِ ، والأَعْيادِ.",
+ "السَّنَةُ الهِجْرِيَّةُ بَدَأَتْ بِهِجْرَةِ النَّبِيِّ مُحَمَّدٍ ﷺ مِنْ مَكَّةَ المُكَرَّمَةِ إلى المَدينَةِ المُنَوَّرَةِ.",
+ "السَّنَةُ المِيلادِيَّةُ بَدَأَتْ بِميلادِ السَّيِّدِ المَسيحِ عيسى بنِ مَرْيَمَ عَلَيْهِ السَّلامُ.",
+ "الأَعْيادُ هِيَ: عيدُ الفِطْرِ المُبارَكُ ، وعيدُ الأَضْحى المُبارَكُ ، وعيدُ المَوْلِدِ النَّبَوِيِّ الشَّريفِ ، وعيدُ ميلادِ السَّيِّدِ المَسيحِ عَلَيْهِ السَّلامُ."
+ ],
+ khat:"المَدْرَسَةُ تُرَبِّينا وتُعَلِّمُنا القِراءَةَ والكِتابَةَ."},
+
+{id:"cleaner",t:"عامِلُ النَّظافَةِ",k:"lesson",p:[17,18,19,20],ill:18,
+ tx:[
+ "ظافِرٌ عامِلُ نَظافَةٍ نَشيطٌ ، يَسْتَيْقِظُ كُلَّ يَوْمٍ مُبَكِّراً ، ويَقِفُ عِنْدَ بابِ دارِهِ بانْتِظارِ سَيّارَةِ دائِرَةِ الخَدَماتِ ، لِيَصِلَ إلى مَكانِ عَمَلِهِ ويَجِدَ صاحِبَهُ حُسَاماً الَّذي يُرافِقُهُ في سَيّارَةِ النَّظافَةِ مَعَ السّائِقِ سَعيدٍ ، إِنَّنا نُحِبُّ ونَحْتَرِمُ العامِلَ ظافِراً ؛ لأَنَّهُ يَمُرُّ على أَبْوابِ مَحَلَّتِنا ، يَجْمَعُ أَكْياسَ نِفاياتِ البُيوتِ مِنْ دونِ إِهْمالٍ لِتَظَلَّ البُيوتُ والشَّوارِعُ نَظيفَةً وجَميلَةً.",
+ "إِنَّنا نُساعِدُ عامِلَ النَّظافَةِ ؛ لأَنَّهُ يُحافِظُ على صِحَّتِنا ، وبِعَمَلِهِ يُبْعِدُنا مِنَ الإِصابَةِ بِالأَمْراضِ ، وتَظَلُّ الشَّوارِعُ نَظيفَةً وأَرْصِفَتُها جَميلَةً بِأَلْوانِها البَيْضِ والصُّفْرِ.",
+ "نُساعِدُ ظافِراً قَبْلَ الذَّهابِ إلى المَدْرَسَةِ فَنَحْمِلُ أَكْياسَ النِّفاياتِ ونَضَعُها على مَقْرُبَةٍ مِنَ الرَّصيفِ ، لِكَيْلا يَتْعَبَ ، ويَبْقى ظافِرٌ وصاحِبُهُ حُسامٌ نَشيطَيْنِ.",
+ "يُساعِدُهُ السّائِقُ سَعيدٌ بِتَنْبيهِ أَهْلِ المَحَلَّةِ لِيَكونوا على عِلْمٍ بِقُدومِ سَيّارَةِ النَّظافَةِ ، وظافِرٌ يُنادينا بِصَوْتِهِ الحَنونِ (النَّظافَةُ مِنَ الإيمانِ).",
+ "إِنَّنا نَدْعو لِظافِرٍ وصاحِبَيْهِ بِالقُوَّةِ والسَّلامَةِ ، لِتَظَلَّ مَحَلَّتُنا نَظيفَةً وجَميلَةً."
+ ],
+ w:[["يَسْتَيْقِظُ","يَصْحو مِنْ نَوْمِهِ"],["إِهْمالٌ","تَقْصيرٌ"]],
+ khat:"نَحْنُ نُحِبُّ عامِلَ النَّظافَةِ ، لأَنَّهُ بِعَمَلِهِ يُحافِظُ على صِحَّتِنا."},
+
+{id:"clean2",t:"النَّظافَةُ في البَيْتِ والمَدْرَسَةِ",k:"expr",p:[21],
+ tx:[
+ "النَّظافَةُ عامِلٌ أَساسِيٌّ في حَياةِ الفَرْدِ لِذلِكَ يَجِبُ المُحافَظَةُ عَلَيْها بِجَميعِ مَجالاتِها البَدَنِيَّةِ والمَنْزِلِيَّةِ والمَدْرَسِيَّةِ كَما يَأْتي:",
+ "النَّظافَةُ البَدَنِيَّةُ: يَجِبُ الاسْتِحْمامُ اليَوْمِيُّ لِلْبَدَنِ ، والمُحافَظَةُ على غَسْلِ المَلابِسِ وارْتِداءِ مَلابِسَ نَظيفَةٍ ، والمُحافَظَةُ على الأَسْنانِ ، إِذْ يَجِبُ غَسْلُها يَوْمِيّاً ثَلاثَ مَرّاتٍ. والمُحافَظَةُ على نَظافَةِ الأُذُنِ والعَيْنِ ونَظافَةِ الشَّعْرِ.",
+ "النَّظافَةُ المَنْزِلِيَّةُ: يَجِبُ المُحافَظَةُ على نَظافَةِ السَّريرِ وغُرْفَةِ النَّوْمِ وعَدَمِ رَمْيِ القاذوراتِ والأَوْراقِ والأَوْساخِ في المَنْزِلِ.",
+ "النَّظافَةُ المَدْرَسِيَّةُ: يَجِبُ المُحافَظَةُ على نَظافَةِ الصَّفِّ وعلى الكُتُبِ المَدْرَسِيَّةِ وعَدَمِ اتْلافِها ، والمُحافَظَةُ على جُدْرانِ الصَّفِّ والسّاحَةِ المَدْرَسِيَّةِ ووَضْعِ سَلَّةٍ لِلْقُمامَةِ في الصَّفِّ لِرَمْيِ المُخَلَّفاتِ."
+ ],
+ khat:"نَحْنُ نُحِبُّ عامِلَ النَّظافَةِ ، لأَنَّهُ بِعَمَلِهِ يُحافِظُ على صِحَّتِنا."},
+
+{id:"parents",t:"أَبي وأُمّي",k:"poem",p:[22],ill:22,
+ tx:[
+ "يا رَبَّنا يا ذا الكَرَمْ",
+ "يا واهِباً كُلَّ النِّعَمْ",
+ "هذا أَبي نِعْمَ الأَبْ",
+ "مِنْ أَجْلِنا كَمْ يَتْعَبْ",
+ "أُمّي الَّتي أُحِبُّها",
+ "مَنْ مِثْلُها في فَضْلِها",
+ "بارِكْهُما يا رَبَّنا",
+ "واحْفَظْهُما دَوْماً لَنا"
+ ]},
+
+{id:"winter",t:"فَصْلُ الشِّتاءِ",k:"expr",p:[23],
+ tx:[
+ "تَكْثُرُ الغُيومُ المُمْطِرَةُ في السَّماءِ شِتاءً.",
+ "يَكونُ الجَوُّ بارِداً ، وتَهُبُّ الرِّياحُ.",
+ "وتَسْقُطُ الأَمْطارُ ، ويَحْدُثُ البَرْقُ والرَّعْدُ.",
+ "يَكونُ اللَّيْلُ في الشِّتاءِ طَويلاً ، والنَّهارُ قَصيراً.",
+ "نَلْبَسُ المَلابِسَ الثَّقيلَةَ ، ونَسْتَعْمِلُ المَدافِئَ."
+ ],
+ khat:"قالَ السَّيِّدُ المَسيحُ عَلَيْهِ السَّلامُ: الحَقُّ يُحَرِّرُ الإِنْسانَ"}
+);
+// batch 3: pages 24-31
+LS.push(
+{id:"animals",t:"الرِّفْقُ بِالحَيَوانِ",k:"lesson",p:[24,25,26,27],ill:24,
+ tx:[
+ "رَأى الإِمامُ عَلِيٌّ عَلَيْهِ السَّلامُ غُلاماً يَضْرِبُ حِمارَهُ بِالعَصا حَتَّى سالَ دَمُهُ مِنْ أُذُنَيْهِ.",
+ "فَقالَ لَهُ: ارْحَمْ دابَّتَكَ يا بُنَيَّ.",
+ "قالَ الغُلامُ: هُوَ حَيَوانٌ لا يَفْهَمُ يا سَيِّدي.",
+ "فَقالَ عَلَيْهِ السَّلامُ: أَما قَرَأْتَ القُرآنَ؟",
+ "أَجابَ الغُلامُ: هَلْ ذَكَرَ القُرآنُ الكَريمُ ذلِكَ؟",
+ "قالَ عَلَيْهِ السَّلامُ: أَلَمْ تَسْمَعْ قَوْلَهُ تَعالى: وَما مِنْ دابَّةٍ في الأَرْضِ وَلا طائِرٍ يَطيرُ بِجَناحَيْهِ إِلّا أُمَمٌ أَمْثالُكُمْ ما فَرَّطْنا في الكِتابِ مِنْ شَيْءٍ ثُمَّ إِلى رَبِّهِمْ يُحْشَرونَ.",
+ "نَدِمَ الغُلامُ وأَخَذَ يَبْكي ويَقولُ: أَسْتَغْفِرُ اللَّهَ. أَسْتَغْفِرُ اللَّهَ سامِحْني يا رَبِّ."
+ ],
+ w:[["غُلام","وَلَدٌ"],["دابَّةٌ","حَيَوانٌ"],["أَجابَ","رَدَّ على السُّؤالِ"],["أُمَمٌ","مَجْموعَةٌ مِنَ الأَفْرادِ"],["ما فَرَّطْنا","ما أَهْمَلْنا"],["يُحْشَرونَ","يُبْعَثونَ يَوْمَ القِيامَةِ"]],
+ khat:"ارْحَموا مَنْ في الأَرْضِ يَرْحَمْكُمْ مَنْ في السَّماءِ."},
+
+{id:"clock",t:"كُنْ مِثْلَ السّاعَةِ والقَلْبِ",k:"lesson",p:[28,29,30],ill:28,
+ tx:[
+ "قالَ أَحْمَدُ: السّاعَةُ تَعْمَلُ بِدِقَّةٍ ونِظامٍ: تِك تاك ، تِك تاك.",
+ "الَّذي يَعْمَلُ بِدِقَّةٍ ونِظامٍ ، نَقولُ فيهِ: إِنَّهُ مِثْلُ السّاعَةِ.",
+ "قالَتْ فاطِمَةُ: والقَلْبُ يَعْمَلُ بِدِقَّةٍ ونِظامٍ: دُم دام ، دُم دام.",
+ "يَنْبَسِطُ فَيَسْتَقْبِلُ الدَّمَ الفاسِدَ ، وَيَنْقَبِضُ فَيَدْفَعُ الدَّمَ النَّقِيَّ.",
+ "قالَ هِشامٌ: والقَلْبُ في انْبِساطِهِ وانْقِباضِهِ ، غايَةٌ في الدِّقَّةِ والنِّظامِ. ودَقّاتُ القَلْبِ المُنْتَظِمَةُ دَليلٌ على صِحَّةِ الإِنْسانِ.",
+ "قالَتْ زَيْنَبُ: والدَّقّاتُ غَيْرُ المُنْتَظِمَةِ دَليلٌ على مَرَضِهِ فَهَلْ أَنْتَ مِثْلُ السّاعَةِ والقَلْبِ يا هِشامُ تَعْمَلُ بِدِقَّةٍ ونِظامٍ؟"
+ ],
+ w:[["يَنْبَسِطُ القَلْبُ","يَتَمَدَّدُ ويَمْتَلِئُ دَماً فاسِداً"],["يَنْقَبِضُ القَلْبُ","يَتَقَلَّصُ فَيَدْفَعُ الدَّمَ النَّقِيَّ"]],
+ khat:"المَشْيُ يُساعِدُ القَلْبَ على العَمَلِ بِدِقَّةٍ وانْتِظامٍ."},
+
+{id:"whoami",t:"مَنْ أَنا؟",k:"poem",p:[31],ill:31,
+ tx:[
+ "مَخْلوقَةٌ غَريبَةْ ، صَغيرَةٌ عَجيبَةْ",
+ "أَعْمَلُ باسْتِمْرارْ ، في اللَّيْلِ والنَّهارْ",
+ "أَعيشُ في خَلايا ، كَثيرَةِ الزَّوايا",
+ "أَطيرُ لِلأَشْجارْ ، والزَّهْرِ والثِّمارْ",
+ "أَمْتَصُّ مِنْها الماءْ ، وأَجْمَعُ الغِذاءْ",
+ "إِذا أَتَيْتَ عِنْدي ، وَجَدْتَ حُلْوَ الشَّهْدِ",
+ "مِنْ عَسَلٍ مُصَفّى ، تَأْكُلُهُ فَتَشْفى",
+ "فَهَلْ عَرَفْتَ رَسْمي ، وَمَنْ أَنا وما اسْمي"
+ ],
+ w:[["الشَّهْدُ","العَسَلُ"],["عَسَلٌ مُصَفّى","عَسَلٌ خالِصٌ ، خالٍ مِنَ الشَّمْعِ وغَيْرِهِ"]]}
+);
+// batch 4: pages 32-35
+LS.push(
+{id:"spring",t:"فَصْلُ الرَّبيعِ",k:"expr",p:[32],
+ tx:[
+ "يَكونُ الجَوُّ في فَصْلِ الرَّبيعِ مُعْتَدِلاً. لا حارّاً ولا بارِداً.",
+ "تُورِقُ الأَشْجارُ ، وتَظْهَرُ الأَزْهارُ ، وتُغَرِّدُ الطُّيورُ.",
+ "يَبْدَأُ فَصْلُ الرَّبيعِ في شَهْرِ آذارَ ، وفيهِ عيدُ الرَّبيعِ أَوْ عيدُ الشَّجَرَةِ.",
+ "أَنا أُحِبُّ الرَّبيعَ ، لَيْتَ الزَّمانَ كُلَّهُ رَبيعٌ."
+ ],
+ khat:"أُحِبُّ اللُّغَةَ العَرَبِيَّةَ ؛ لأَنَّها لُغَةُ القُرآنِ الكَريمِ."},
+
+{id:"shepherd",t:"الرّاعي الأَمينُ",k:"lesson",p:[33,34,35],ill:33,
+ tx:[
+ "كانَ غَسّانُ يَرْعى غَنَماً في الوادي القَريبِ مِنَ القَرْيَةِ. مَرَّ بِهِ رَجُلٌ يَرْكَبُ حِصاناً فَسَلَّمَ عَلَيْهِ وقالَ لَهُ:",
+ "بِعْني نَعْجَةً أَيُّها الغُلامُ.",
+ "قالَ لَهُ غَسّانُ: لا ، يا عَمّي. هذِهِ الغَنَمُ لا تَعودُ لي. أَنا أَرْعاها بِأَجْرٍ.",
+ "فَقالَ الرَّجُلُ: قُلْ لِصاحِبِها: أَكَلَها الذِّئْبُ.",
+ "أَجابَهُ غَسّانُ: لا ، يا عَمّي .. أَنا لا أَخونُ الأَمانَةَ.",
+ "ضَحِكَ الرَّجُلُ وقالَ: بارَكَ اللَّهُ فيكَ يا وَلَدي. أَنْتَ وَلَدٌ ذَكِيٌّ وأَمينٌ. تَعالَ اسْرَحْ بِغَنَمي وأُعْطيكَ أَجْراً مُضاعَفاً.",
+ "فَقالَ غَسّانُ: شُكْراً لَكَ يا عَمّي. أَنا هُنا في قَرْيَتي قانِعٌ بِرِزْقي.",
+ "ثُمَّ وَدَّعَهُ وهُوَ يَقولُ: ما أَجْمَلَ أَنْ يَكونَ الإِنْسانُ أَميناً! وما أَحْلى أَنْ يَكونَ قَنوعاً!"
+ ]}
+);
+// batch 5: pages 36-43
+LS.push(
+{id:"guard",t:"الحارِسُ",k:"expr",p:[36],
+ tx:[
+ "الحارِسُ اللَّيْلِيُّ يَحْرُسُ النّاسَ وبُيوتَهُمْ مِنَ العُدْوانِ والسَّرِقَةِ.",
+ "وهُوَ يَحْمي المالَ العامَّ ودَوائِرَ الدَّوْلَةِ.",
+ "يَحْمِلُ الحارِسُ بُنْدُقِيَّةً وعَصاً وصافِرَةً لِلتَّنْبيهِ.",
+ "يَسْتَعينُ الحارِسُ بِالشُّرْطَةِ ، أَنا أُحِبُّ أَفْرادَ الشُّرْطَةِ وأَحْتَرِمُهُمْ وأُساعِدُ دُورِيّاتِهِمْ ، وأَتَعاوَنُ مَعَهُمْ.",
+ "الشُّرْطَةُ تَحْمي النّاسَ وأَمْوالَهُمْ مِنَ الأَشْرارِ ، وتُحافِظُ على راحَةِ النّاسِ وأَمْنِهِمْ واسْتِقْرارِهِمْ."
+ ],
+ khat:"أُحِبُّ الشُّرْطَةَ وأَحْتَرِمُهُمْ وأَتَعاوَنُ مَعَهُمْ."},
+
+{id:"king",t:"المَلِكُ الخادِمُ",k:"lesson",p:[37,38,39],ill:37,
+ tx:[
+ "كانَ هُناكَ مَلِكٌ مُتَكَبِّرٌ ومَغْرورٌ ، جَلَسَ على عَرْشِهِ في يَوْمٍ مِنَ الأَيّامِ ، وقالَ لِشَعْبِهِ: إِنَّكُمْ جَميعاً خَدَمٌ لي. فَصاحَ أَحَدُ الحاضِرينَ: كُلُّنا نَخْدُمُ بَعْضَنا بَعْضاً ، فَصاحَ المَلِكُ: مَنِ المُتَكَلِّمُ؟",
+ "أَجابَهُ شَيْخٌ كَبيرٌ قائِلاً: أَنا مِنْ قَرْيَةٍ بَعيدَةٍ في مَمْلَكَتِكَ ، جِئْتُ إلى قَصْرِكَ لأَنَّهُ لا يوجَدُ ماءٌ في قَرْيَتِنا.",
+ "قالَ المَلِكُ: كَيْفَ تَجْرُؤُ على قَوْلِ هذا الكَلامِ؟",
+ "قالَ الشَّيْخُ: سَأُثْبِتُ لَكَ صِحَّةَ كَلامي قَبْلَ مَجيءِ اللَّيْلِ.",
+ "قالَ المَلِكُ: أَتَحَدّاكَ ، وإِنْ أَثْبَتَّ لي كَلامَكَ ، سَوْفَ آمُرُ بِحَفْرِ بِئْرٍ في قَرْيَتِكَ.",
+ "فَقالَ الشَّيْخُ: اتْبَعْني فَتَبِعَهُ المَلِكُ ، والْتَفَتَ إِلَيْهِ الشَّيْخُ قائِلاً: لَهُ أَحْمِلْ عَصايَ وبَعْدَ أَنْ سارا بِضْعَ خُطُواتٍ ، قالَ لَهُ: أَعْطِني عَصايَ ، فَأَعْطاهُ المَلِكُ العَصا.",
+ "قالَ الشَّيْخُ: أَتُريدُ إِثْباتاً أَكْبَرَ مِنْ هذا؟ لَقَدْ خَدَمْتَني وحَمَلْتَ لي العَصا.",
+ "ضَحِكَ المَلِكُ وفَرِحَ بِذَكاءِ هذا الشَّيْخِ وأَمَرَ بِحَفْرِ بِئْرٍ في قَرْيَتِهِ وعَيَّنَهُ مُسْتَشاراً لَهُ."
+ ],
+ w:[["بِئْرٌ","حُفْرَةٌ عَميقَةٌ في الأَرْضِ يَخْرُجُ مِنْها الماءُ"]],
+ khat:"كُلُّنا نَخْدُمُ بَعْضَنا بَعْضاً."},
+
+{id:"omar",t:"عُمَرُ العادِلُ",k:"lesson",p:[40,41,42],ill:40,
+ tx:[
+ "خَرَجَ الخَليفَةُ عُمَرُ بْنُ الخَطّابِ رَضِيَ اللَّهُ عَنْهُ ، يَتَفَقَّدُ أَحْوالَ النّاسِ فَوَجَدَ امْرَأَةً تُشْعِلُ ناراً تَحْتَ قِدْرٍ ، وحَوْلَها أَطْفالٌ يَبْكونَ ، فَسَأَلَها الخَليفَةُ قائِلاً: لِماذا يَبْكي الأَطْفالُ؟",
+ "قالَتْ: إِنَّهُمْ يَبْكونَ مِنَ الجوعِ.",
+ "فَقالَ الخَليفَةُ: وَما الَّذي في القِدْرِ؟",
+ "قالَتْ: ماءٌ أُسْكِتُهُمْ بِهِ حَتّى يَناموا.",
+ "خَرَجَ الخَليفَةُ مُسْرِعاً وذَهَبَ إلى بَيْتِهِ ، وحَمَلَ سَمْناً وكيساً مِنَ الطَّحينِ ، ورَجَعَ إلى المَرْأَةِ ، ثُمَّ جَلَسَ ووَضَعَ مِقْداراً مِنَ الطَّحينِ ، وقَليلاً مِنَ السَّمْنِ في القِدْرِ ، وأَعَدَّ طَعاماً لِلأَطْفالِ وأَطْعَمَهُمْ.",
+ "شَبِعَ الأَطْفالُ وفَرِحوا ونامُوا وخَرَجَ الخَليفَةُ مَسْروراً لِفَرَحِهِمْ."
+ ],
+ w:[["يَتَفَقَّدُ","يَسْأَلُ عَنْ أَحْوالِ النّاسِ وأُمورِهِمْ"],["سَمْناً","دُهْناً"],["مِقْداراً","كَمِّيَّةً"],["أَعَدَّ طَعاماً","أَحْضَرَ طَعاماً"]]},
+
+{id:"dua",t:"دُعاءُ تِلْميذٍ",k:"poem",p:[43],ill:43,
+ tx:[
+ "يا إِلهي يا إِلهي ، يا مُجيبَ الدَّعَواتِ",
+ "اجْعَلِ اليَوْمَ سَعيداً ، وكَثيرَ البَرَكاتِ",
+ "وأَعِنِّي في دُروسي ، وأَداءِ الواجِباتِ",
+ "وأَنِرْ عَقْلي وقَلْبي ، بِالعُلومِ النّافِعاتِ",
+ "واحْمِني واحْمِ بِلادي ، مِنْ شُرورِ الحادِثاتِ"
+ ]}
+);
+// batch 6: pages 44-48
+LS.push(
+{id:"summer",t:"فَصْلُ الصَّيْفِ",k:"expr",p:[44],
+ tx:[
+ "الجَوُّ حارٌّ في فَصْلِ الصَّيْفِ.",
+ "يَكونُ فيهِ اللَّيْلُ أَقْصَرَ مِنَ النَّهارِ.",
+ "يَذْهَبُ النّاسُ إلى المَصايِفِ والمَسابِحِ والمُتَنَزَّهاتِ.",
+ "تَكْثُرُ فيهِ الفَواكِهُ والخُضْراواتُ ، وتُعَطَّلُ المَدارِسُ.",
+ "مُدَّةُ الصَّيْفِ ثَلاثَةُ أَشْهُرٍ تَبْدَأُ في شَهْرِ حَزيرانَ.",
+ "ويَلْبَسونَ المَلابِسَ الخَفيفَةَ."
+ ],
+ khat:"رِضا اللَّهِ في رِضا الوالِدَيْنِ وسَخَطُهُ مِنْ سَخَطِهِما."},
+
+{id:"rooster",t:"الدّيكُ والثَّعْلَبُ الماكِرُ",k:"lesson",p:[45,46,47,48],ill:45,
+ tx:[
+ "رَأى ثَعْلَبٌ دِيكاً يَقِفُ على غُصْنِ شَجَرَةٍ ، فَفَكَّرَ في حيلَةٍ لِيَأْكُلَهُ.",
+ "وَقَفَ الثَّعْلَبُ تَحْتَ الشَّجَرَةِ ، وقالَ لِلدّيكِ: مَرْحَباً يا صَديقي. لَقَدْ تُبْتُ فَلَنْ آكُلَ الدَّجاجَ ، أُريدُ أَنْ أَسْمَعَ صَوْتَكَ الجَميلَ ، انْزِلْ والْعَبْ مَعي.",
+ "قالَ الدّيكُ: أَيُّها المُحْتالُ تُريدُ أَنْ تَأْكُلَني. كَيْفَ أُصَدِّقُكَ وأَنْتَ عَدُوّي؟",
+ "قالَ الثَّعْلَبُ: هَلْ سَمِعْتَ الخَبَرَ الجَديدَ؟",
+ "قالَ الدّيكُ: وَما الخَبَرُ الجَديدُ؟",
+ "قالَ الثَّعْلَبُ: اتَّفَقَتْ حَيَواناتُ الغابَةِ أَنْ تَعيشَ بِلا عِراكٍ. الكَلْبُ لا يُطارِدُ القِطَّ ، والقِطُّ لا يَأْكُلُ الفَأْرَ ، والذِّئْبُ لا يُؤْذي الغَنَمَ ، والثَّعْلَبُ لا يُعادي الدَّجاجَ.",
+ "قالَ الدّيكُ: هذا كَلامٌ جَميلٌ. سَأُنادي كِلابَ القَرْيَةِ لِتَلْعَبَ مَعَنا. صاحَ الدّيكُ وجاءَتِ الكِلابُ تَرْكُضُ. فَسَمِعَ الثَّعْلَبُ الماكِرُ نُباحَ الكِلابِ فَوَلّى هارِباً."
+ ],
+ w:[["الماكِرُ","المُحْتالُ"],["نُباحٌ","صَوْتُ الكَلْبِ"],["عِراكٌ","قِتالٌ وعَداوَةٌ"],["وَلّى هارِباً","انْهَزَمَ"]]}
+);
+// batch 7: pages 49-57
+LS.push(
+{id:"eyes",t:"سَلامَةُ العُيونِ",k:"lesson",p:[49,50,51],ill:49,
+ tx:[
+ "قالَ عادِلٌ لأُمِّهِ: جاءَتْ طَبيبَةُ العُيونِ إلى مَدْرَسَتِنا اليَوْمَ يا أُمّي.",
+ "فَلَمّا دَخَلَتْ صَفَّنا ، وَقَفْنا احْتِراماً لَها ، وقُلْنا بِصَوْتٍ واحِدٍ: أَهْلاً بِالزّائِرَةِ الكَريمَةِ. فَرَدَّتْ عَلَيْنا وقالَتْ: شُكْراً لَكُمْ أَحِبّائي ، جِئْتُ أَفْحَصُ عُيونَكُمْ.",
+ "قالَتْ أُمُّ عادِلٍ: وماذا فَعَلَتْ مَعَكُمُ الطَّبيبَةُ؟",
+ "قالَ عادِلٌ: فَحَصَتْ عُيونَ التَّلاميذِ واحِداً واحِداً.",
+ "وقَبْلَ أَنْ تُغادِرَ صَفَّنا أَوْصَتْنا وقالَتْ: عُيونُكُمْ سَليمَةٌ والحَمْدُ لِلَّهِ ، اغْسِلوا عُيونَكُمْ بِماءٍ نَظيفٍ كُلَّ يَوْمٍ ، واطْرُدوا الذُّبابَ مِنْ بُيوتِكُمْ ، وَلا تَلْعَبوا بِالتُّرابِ ، وإِذا شَعَرْتُمْ بِمَرَضٍ في عُيونِكُمْ ، فَأَسْرِعوا إلى الطَّبيبِ ، وتَذَكَّروا دائِماً أَنَّ الوِقايَةَ خَيْرٌ مِنَ العِلاجِ."
+ ]},
+
+{id:"health",t:"المِهَنُ الصِّحِّيَّةُ (الطَّبيبُ والمُمَرِّضُ)",k:"expr",p:[52],
+ tx:[
+ "إِذا مَرِضْنا نَذْهَبُ إلى المُسْتَشْفى.",
+ "في المُسْتَشْفى أَطِبّاءُ ، وفيها مُمَرِّضونَ ومُمَرِّضاتٌ.",
+ "الطَّبيبُ يُعالِجُ المَرْضى ، يُساعِدُهُ المُمَرِّضونَ والمُمَرِّضاتُ.",
+ "أَنا أُحِبُّ الطَّبيبَ ، وأُحِبُّ المُمَرِّضينَ والمُمَرِّضاتِ.",
+ "أَنا أُطيعُ وَصايا الطَّبيبِ ، في تَناوُلِ الدَّواءِ.",
+ "الرّازي وابْنُ سينا وابْنُ النَّفيسِ مِنَ الأَطِبّاءِ العَرَبِ القُدامى."
+ ],
+ khat:"العَيْنُ أَغْلى عُضْوٍ في الجِسْمِ أُحافِظُ على نَظافَتِها."},
+
+{id:"eid",t:"العيدُ",k:"lesson",p:[53,54,55],ill:54,
+ tx:[
+ "أَحْمَدُ: أَنا أُحِبُّ العيدَ ، وأُخْتي فاطِمَةُ تُحِبُّ العيدَ.",
+ "فاطِمَةُ: كُلُّنا نَفْرَحُ بِالعيدِ.",
+ "الأُمُّ: نَلْبَسُ المَلابِسَ النَّظيفَةَ والجَميلَةَ في العيدِ.",
+ "أَحْمَدُ: عِنْدي ثِيابٌ نَظيفَةٌ وجَميلَةٌ.",
+ "فاطِمَةُ: وأَنا عِنْدي ثِيابٌ نَظيفَةٌ وجَميلَةٌ.",
+ "الأَبُ: غَداً يَوْمُ العيدِ. نَفْرَحُ بِزِيارَةِ أَقارِبِنا وجيرانِنا وأَصْدِقائِنا ونَذْهَبُ إلى المَلاعِبِ والحَدائِقِ.",
+ "اسْتَيْقَظَ أَحْمَدُ مُبَكِّراً في صَباحِ يَوْمِ العيدِ ، ولَبِسَ مَلابِسَ العيدِ ، واسْتَيْقَظَتْ فاطِمَةُ مُبَكِّرَةً ولَبِسَتْ مَلابِسَ العيدِ.",
+ "فاطِمَةُ: عيدُكَ مُبارَكٌ يا أَحْمَدُ. كُلُّ عامٍ وأَنْتَ بِخَيْرٍ.",
+ "أَحْمَدُ: عيدُكِ مُبارَكٌ يا فاطِمَةُ. كُلُّ عامٍ وأَنْتِ بِخَيْرٍ.",
+ "ذَهَبَ الاثْنانِ إلى الأَبِ والأُمِّ وقَبَّلاهُما وقالا لَهُما: عيدُكَ مُبارَكٌ يا أَبي. عيدُكِ مُبارَكٌ يا أُمّي ، وفَرِحَ الجَميعُ."
+ ],
+ khat:"أُقَبِّلُ والِدَيَّ يَوْمَ العيدِ وأَقولُ لَهُما: عيدٌ سَعيدٌ."},
+
+{id:"eidpoem",t:"يَوْمُ العيدِ",k:"poem",p:[56],ill:56,
+ tx:[
+ "خَرَجْتُ يَوْمَ العيدِ ، بِمَلْبَسي الجَديدِ",
+ "أَدْعو لَكُمْ إِخْواني ، بِأَجْمَلِ الأَماني",
+ "هَيّا مَعي لِنَذْهَبْ ، ثُمَّ جَميعاً نَلْعَبْ",
+ "فَيَوْمُنا جَميلُ ، وكُلُّنا نَقولُ",
+ "نَحْنُ نُحِبُّ العيدا ، نُحِبُّ أَنْ يَعودا",
+ "فَكُلُّهُ جَمالُ ، يُحِبُّهُ الأَطْفالُ"
+ ]},
+
+{id:"autumn",t:"فَصْلُ الخَريفِ",k:"expr",p:[57],
+ tx:[
+ "فَصْلُ الخَريفِ جَميلٌ ، تَكْثُرُ فيهِ الغُيومُ ، وتَهُبُّ الرِّياحُ الخَفيفَةُ ، وتَصْفَرُّ أَوْراقُ الأَشْجارِ.",
+ "يَميلُ الجَوُّ إلى البُرودَةِ ، والهَواءُ لَطيفٌ يَبْعَثُ على النَّشاطِ.",
+ "تَسْقُطُ فيهِ أَمْطارٌ خَفيفَةٌ ، ويَكونُ الجَوُّ جَميلاً.",
+ "يَبْدَأُ فَصْلُ الخَريفِ في شَهْرِ أَيْلولَ ومُدَّتُهُ ثَلاثَةُ أَشْهُرٍ.",
+ "نَرى فيهِ أَوْراقَ الأَشْجارِ تُغَطّي الأَرْضَ ، والتُّرابَ رَطْباً.",
+ "يُعِدُّ الفَلّاحونَ أَرْضَهُمْ لِلزِّراعَةِ."
+ ],
+ khat:"أَنا أُحِبُّ الشِّتاءَ والرَّبيعَ والصَّيْفَ والخَريفَ."}
+);
+// batch 8: pages 58-67
+LS.push(
+{id:"neighbors",t:"الجيرانُ",k:"lesson",p:[58,59,60],ill:58,
+ tx:[
+ "جَلَسَ عَدْنانُ مَعَ أَبيهِ يُحَدِّثُهُ عَنِ الجارِ الجَديدِ.",
+ "قالَ عَدْنانُ: سَكَنَتْ أُسْرَةٌ بِجِوارِنا اليَوْمَ .. يا أَبي.",
+ "الأَبُ: وكَيْفَ عَرَفْتَ ذلِكَ؟",
+ "عَدْنانُ: ساعَدْتُ الأُسْرَةَ على حَمْلِ الأَثاثِ.",
+ "الأَبُ: أَحْسَنْتَ يا عَدْنانُ .. هذا واجِبٌ. إِنَّ لِلْجارِ حُقوقاً على جارِهِ.",
+ "الأُمُّ: عَلَيْنا أَنْ نُقَدِّمَ إلى الجارِ الجَديدِ وَجْبَةَ العَشاءِ.",
+ "الأَبُ: يَجِبُ أَنْ نَتَعَرَّفَ إلى أَفْرادِ الأُسْرَةِ ، ونَزورَها في الأُسْبوعِ القادِمِ ، إِنْ شاءَ اللَّهُ.",
+ "عَدْنانُ: إِنَّهُمْ أَرْبَعَةٌ .. يا أَبي. فُؤادٌ ومَرْيَمُ والأَبُ والأُمُّ.",
+ "سَلْمى: أَنا فَرِحَةٌ بِجيرانِنا ، سَأَلْعَبُ مَعَ ابْنَتِهِمْ مَرْيَمَ.",
+ "عَدْنانُ: أَنا سَأَلْعَبُ مَعَ ابْنِهِمْ فُؤادٍ.",
+ "الأُمُّ: حافِظا على الهُدوءِ ، ولا تُزْعِجا الجيرانَ.",
+ "أَوْصى النَّبِيُّ مُحَمَّدٌ ﷺ بِالجارِ وقالَ: (خَيْرُ الجيرانِ عِنْدَ اللَّهِ خَيْرُهُمْ لِجارِهِ)",
+ "الأَبُ: وقالَ الإِمامُ عَلِيٌّ عَلَيْهِ السَّلامُ: (سَلْ عَنِ الجارِ قَبْلَ الدّارِ)."
+ ]},
+
+{id:"ducks",t:"بَطَّتانِ وسُلَحْفاةٌ",k:"lesson",p:[61,62,63,64],ill:62,
+ tx:[
+ "سَكَنَتْ بَطَّتانِ في غَديرٍ ، وسَكَنَتْ مَعَهُما سُلَحْفاةٌ ، وأَصْبَحَتِ السُّلَحْفاةُ صَديقَةً لِلْبَطَّتَيْنِ ، تَزورُهُما كُلَّ يَوْمٍ ، فَيَقْضي الثَّلاثَةُ وَقْتاً جَميلاً في الحَديثِ والسَّمَرِ بِالقُرْبِ مِنَ الغَديرِ.",
+ "وبَعْدَ مُدَّةٍ مِنَ الزَّمَنِ جَفَّ ماءُ الغَديرِ ، وأَرادَتِ البَطَّتانِ أَنْ تُغادِرا المَكانَ وتَذْهَبا إلى غَديرٍ آخَرَ فيهِ ماءٌ كَثيرٌ.",
+ "جاءَتِ البَطَّتانِ لِوَداعِ السُّلَحْفاةِ ، وقالَتا: السَّلامُ عَلَيْكِ ، فَإِنَّنا ذاهِبَتانِ إلى غَديرٍ آخَرَ.",
+ "قالَتِ السُّلَحْفاةُ: أَنا لا أَقْدِرُ على العَيْشِ إِلّا في الماءِ ، فَخُذاني مَعَكُما ولا تَتْرُكاني وَحيدَةً.",
+ "فَكَّرَتِ البَطَّتانِ وقالَتا: السُّلَحْفاةُ لا تَقْدِرُ على الطَّيَرانِ ، فَكَيْفَ السَّبيلُ إلى حَمْلِها؟",
+ "أَحْضَرَتِ البَطَّتانِ عَصاً ، وأَمْسَكَتْ كُلُّ واحِدَةٍ مِنْهُما طَرَفاً بِمِنْقارِها ، وطَلَبَتا مِنَ السُّلَحْفاةِ أَنْ تَتَعَلَّقَ في وَسَطِ العَصا وقالَتا لَها: لا تَخافي أَيَّتُها الصَّديقَةُ ، سَنَطيرُ بِكِ إلى غَديرٍ آخَرَ. امْسِكي بِالعَصا جَيِّداً بِفَمِكِ ، ولا تَتَكَلَّمي في أَثْناءِ السَّفَرِ فَتَقَعي وتَموتي.",
+ "شاهَدَ بَعْضُ النّاسِ البَطَّتَيْنِ تَحْمِلانِ السُّلَحْفاةَ فَقالوا: عَجَبٌ .. عَجَبٌ ، بَطَّتانِ تَحْمِلانِ سُلَحْفاةً!",
+ "أَرادَتِ السُّلَحْفاةُ أَنْ تَتَكَلَّمَ ، لكِنَّها تَذَكَّرَتْ نَصيحَةَ البَطَّتَيْنِ فَسَكَتَتْ ، وبَقِيَتْ ساكِتَةً لا تَتَكَلَّمُ إلى أَنْ وَصَلَ الثَّلاثَةُ إلى غَديرٍ فيهِ ماءٌ.",
+ "شَكَرَتِ السُّلَحْفاةُ البَطَّتَيْنِ على مَعْروفِهِما وعاشَتْ مَعَهُما في الغَديرِ الجَديدِ سَعيدَةً."
+ ],
+ w:[["الغَديرُ","بُقْعَةٌ يَجْتَمِعُ فيها الماءُ"],["تُغادِرُ","تَتْرُكُ"],["السَّبيلُ","الطَّريقَةُ"],["السَّمَرُ","الحَديثُ لَيْلاً"],["جَفَّ","يَبِسَ"],["مَعْروفُهُما","إِحْسانُهُما ، عَمَلُ الجَميلِ"]],
+ khat:"أَنا أَعْمَلُ دائِماً بِنَصائِحِ أُمّي وأَبي ومُعَلِّمَتي."},
+
+{id:"police",t:"شُرْطِيُّ المُرورِ",k:"expr",p:[65],
+ tx:[
+ "شُرْطِيُّ المُرورِ يُنَظِّمُ سَيْرَ السَّيّاراتِ.",
+ "يُساعِدُ النّاسَ على عُبورِ الشّارِعِ.",
+ "نَعْبُرُ الشّارِعَ مِنْ مَناطِقِ العُبورِ.",
+ "أُحِبُّ فِرْقَةَ السَّلامَةِ المُرورِيَّةِ في مَدْرَسَتِنا.",
+ "لأَنَّها تُساعِدُنا على عُبورِ الشّارِعِ بِأَمانٍ ، وأُحِبُّ شُرْطِيَّ المُرورِ."
+ ],
+ khat:"أُحِبُّ النِّظامَ وأَعْبُرُ مِنْ مَناطِقِ العُبورِ."},
+
+{id:"bread",t:"الخُبْزُ",k:"lesson",p:[66,67,68],ill:66,
+ tx:[
+ "طَلَبَ صَبِيٌّ خُبْزاً مِنْ رَجُلٍ.",
+ "فَطَلَبَ الرَّجُلُ الخُبْزَ مِنَ الخَبّازِ.",
+ "فَطَلَبَ الخَبّازُ طَحيناً مِنَ التّاجِرِ.",
+ "فَطَلَبَ التّاجِرُ الطَّحينَ مِنْ طَحّانٍ.",
+ "فَطَلَبَ الطَّحّانُ حِنْطَةً مِنْ فَلّاحٍ.",
+ "فَزَرَعَ الفَلّاحُ زَرْعاً.",
+ "فَأَخْرَجَ الزَّرْعُ حِنْطَةً.",
+ "باعَ الفَلّاحُ الحِنْطَةَ لِلطَّحّانِ.",
+ "فَطَحَنَ الطَّحّانُ الحِنْطَةَ فَصارَتْ طَحيناً.",
+ "فَباعَ الطَّحّانُ الطَّحينَ لِلتّاجِرِ.",
+ "وباعَ التّاجِرُ الطَّحينَ لِلخَبّازِ.",
+ "فَجَعَلَ الخَبّازُ الطَّحينَ عَجيناً ، وخَبَزَهُ فَصارَ خُبْزاً.",
+ "فَباعَ الخَبّازُ الخُبْزَ لِلرَّجُلِ.",
+ "فَأَعْطى الرَّجُلُ الخُبْزَ لِلوَلَدِ.",
+ "أَخَذَ الوَلَدُ الخُبْزَ فَأَكَلَهُ وقالَ: الحَمْدُ لِلَّهِ رَبِّ العالَمينَ."
+ ],
+ khat:"مَنْ جَدَّ وَجَدَ ومَنْ زَرَعَ حَصَدَ."}
+);
+// batch 9: pages 69-74
+LS.push(
+{id:"garden",t:"حَديقَتي",k:"poem",p:[70],ill:70,
+ tx:[
+ "حَديقَتي جَميلَةْ ، كَأَنَّها خَميلَةْ",
+ "فيها زُهورُ الزّينَةْ ، تَزْهو بِها المَدينَةْ",
+ "والوَرْدُ لَيْلاً فَتَّحْ ، بِعِطْرِهِ وأَصْبَحْ",
+ "والزَّهْرُ حُلْوٌ فيها ، وطيبُهُ يُحْييها",
+ "فيها نَرى الأَماني ، وأَجْمَلَ المَعاني"
+ ]},
+
+{id:"publicgarden",t:"الحَديقَةُ العامَّةُ",k:"expr",p:[71],
+ tx:[
+ "الحَديقَةُ العامَّةُ هِيَ مِلْكٌ لِلجَميعِ.",
+ "يَزْرَعُ الفَلّاحُ الأَشْجارَ الدّائِمَةَ الخُضْرَةِ في الحَديقَةِ العامَّةِ لِكَيْ تُلَطِّفَ الجَوَّ فَتَطْرَحَ الأُوكْسُجينَ وتَأْخُذَ ثاني أُوكْسيدِ الكاربونِ.",
+ "ويَزْرَعُ الوُرودَ المُلَوَّنَةَ ، فَما أَجْمَلَها وَهِيَ في الحَديقَةِ تَزْهو.",
+ "الفَلّاحُ يَزْرَعُها ويَهْتَمُّ بِها لِكَيْ تَبْهَجَ النَّظَرَ وتُمْتِعَ النُّفوسَ.",
+ "نَحْنُ نُحافِظُ على الحَديقَةِ العامَّةِ لأَنَّ فائِدَتَها لِلجَميعِ ولَيْسَ لِفَرْدٍ واحِدٍ."
+ ],
+ khat:"لِنَجْعَلَ مِنْ أَرْضِنا مَزْرَعَةً خَضْراءَ وجَنَّةً فَيْحاءَ."},
+
+{id:"oxdonkey",t:"الحِمارُ والثَّوْرُ",k:"lesson",p:[72,73,74],ill:72,
+ tx:[
+ "كانَ لِفَلّاحٍ حِمارٌ وثَوْرٌ.",
+ "وكانَ الفَلّاحُ يَرْكَبُ الحِمارَ مَرَّةً في الأُسْبوعِ لِيَذْهَبَ إلى سوقِ المَدينَةِ ، ويَأْخُذُ الثَّوْرَ إلى الحَقْلِ لِيَحْرُثَ الأَرْضَ كُلَّ يَوْمٍ.",
+ "وفي أَحَدِ الأَيّامِ قالَ الثَّوْرُ لِلحِمارِ: لَقَدْ تَعِبْتُ كَثيراً. إلى مَتى أَعْمَلُ في الحِراثَةِ؟",
+ "قالَ الحِمارُ: تَمارَضْ ، ولا تَأْكُلْ عَلَفَكَ. فَإِذا رَآكَ الفَلّاحُ على هذِهِ الحالِ تَرَكَكَ ولَمْ يَأْخُذْكَ لِلحِراثَةِ.",
+ "وفي صَباحِ اليَوْمِ الثّاني جاءَ الفَلّاحُ فَوَجَدَ الثَّوْرَ نائِماً لَمْ يَأْكُلِ العَلَفَ فَتَرَكَهُ وأَخَذَ الحِمارَ إلى الحَقْلِ وحَرَثَ عَلَيْهِ طولَ اليَوْمِ فَتَعِبَ الحِمارُ تَعَباً شَديداً ، ونَدِمَ على ما قالَهُ لِلثَّوْرِ.",
+ "وفي المَساءِ عادَ الحِمارُ مِنَ الحَقْلِ فَسَأَلَهُ الثَّوْرُ: كَيْفَ حالُكَ يا أَخي؟",
+ "قالَ الحِمارُ: أَنا بِخَيْرٍ ، غَيْرَ أَنِّي سَمِعْتُ الفَلّاحَ يَقولُ لِزَوْجَتِهِ: إِذا بَقِيَ الثَّوْرُ مَريضاً ، بِعْتُهُ على الجَزّارِ قَبْلَ أَنْ يَموتَ فَأَخْسَرَ ثَمَنَهُ.",
+ "خافَ الثَّوْرُ. فَنَهَضَ وأَكَلَ عَلَفَهُ. وفي الصَّباحِ جاءَ الفَلّاحُ وأَخَذَهُ إلى الحَقْلِ ، فَمَشى الثَّوْرُ بِنَشاطٍ."
+ ],
+ w:[["تَمارَضْ","تَظاهَرْ بِأَنَّكَ مَريضٌ"],["نَدِمَ","تَأَسَّفَ ولامَ نَفْسَهُ"]]},
+
+{id:"library1",t:"مَكْتَبَةُ المَدْرَسَةِ",k:"lesson",p:[75,76,77,78],ill:75,
+ tx:[
+ "في يَدِ المُعَلِّمَةِ كِتابٌ صَغيرٌ.",
+ "قالَ التَّلاميذُ: هذا كِتابٌ جَميلٌ. فيهِ صُوَرٌ جَميلَةٌ.",
+ "قالَتِ المُعَلِّمَةُ: في الكِتابِ قِصَصٌ لَطيفَةٌ.",
+ "قالَ التَّلاميذُ: أَيْنَ نَجِدُ مِثْلَ هذا الكِتابِ؟",
+ "قالَتِ المُعَلِّمَةُ: هذا الكِتابُ مِنْ مَكْتَبَةِ المَدْرَسَةِ.",
+ "في المَكْتَبَةِ كُتُبٌ كَثيرَةٌ. فيها قِصَصٌ وحِكاياتٌ لَطيفَةٌ وصُوَرٌ جَميلَةٌ.",
+ "قالَ التَّلاميذُ: نُريدُ أَنْ نَزورَ المَكْتَبَةَ ، ونَقْرَأَ القِصَصَ والحِكاياتِ.",
+ "نَحْنُ نُحِبُّ المَكْتَبَةَ ونُحافِظُ على كُتُبِها.",
+ "ذَهَبَ التَّلاميذُ إلى مَكْتَبَةِ المَدْرَسَةِ.",
+ "قالَتِ المُعَلِّمَةُ: كُلُّ واحِدٍ يَأْخُذُ كِتاباً. هذِهِ كُتُبٌ مُفيدَةٌ. فيها قِصَصٌ وحِكاياتٌ.",
+ "فيها قِصَّةُ الحَمامَةِ والأَوْلادِ ، وقِصَّةُ الغُرابِ الذَّكِيِّ ، وقِصَّةُ الذِّئْبِ والخَرُوفِ ، وغَيْرُها.",
+ "وحافِظوا على نَظافَةِ الكُتُبِ ، اجْلِسوا بِنِظامٍ وطالِعوا بِهُدوءٍ. أَنْتُمْ مِنْ أَصْدِقاءِ المَكْتَبَةِ."
+ ],
+ khat:"وخَيْرُ جَليسٍ في الزَّمانِ كِتابُ."}
+);
+// batch 10: pages 80-84
+LS.push(
+{id:"bookpoem",t:"الكِتابُ",k:"poem",p:[80],ill:80,
+ tx:[
+ "أَنا فَتىً ذو أَدَبْ ، أَقْرَأُ خَيْرَ الكُتُبْ",
+ "إِنْ غابَتِ الأَصْحابُ ، فَصاحِبي الكِتابُ",
+ "فيهِ حَديثُ السَّمَرِ ، مُزَيَّنٌ بِالصُّوَرِ",
+ "كَمْ قَصَّ لي حِكايَةْ ، لَطيفَةً لِلغايَةْ",
+ "فَالعِلْمُ في السُّطورِ ، يَسْري إلى الصُّدورِ"
+ ]},
+
+{id:"animals2",t:"الحَيَواناتُ الأَليفَةُ والمُفْتَرِسَةُ",k:"expr",p:[81],
+ tx:[
+ "البَقَرَةُ والخَروفُ والماعِزُ والجَمَلُ مِنَ الحَيَواناتِ الأَليفَةِ. تَعيشُ في الحَظائِرِ والبُيوتِ والمَزارِعِ.",
+ "نُرَبّيها ونَأْخُذُ مِنْها الحَليبَ والصُّوفَ واللَّحْمَ والجُلودَ.",
+ "الحِصانُ والحِمارُ والبَغْلُ مِنَ الحَيَواناتِ الأَليفَةِ ، نَرْكَبُها ونَحْمِلُ عَلَيْها الأَثْقالَ.",
+ "الحَيَواناتُ المُفْتَرِسَةُ تَعيشُ في الغاباتِ والوِدْيانِ والبَراري. نَبْتَعِدُ عَنْها لأَنَّها تُؤْذينا.",
+ "مِثْلُ الأَسَدِ ، والذِّئْبِ ، والنَّمِرِ ، والدُّبِّ ، والضَّبُعِ."
+ ],
+ khat:"أَنا أُحِبُّ جَدّي وأُحِبُّ جَدَّتي وأَرْعاهُما."},
+
+{id:"rabbit",t:"الأَرْنَبُ والصُّوصُ كوكو",k:"lesson",p:[82,83,84,85,86,87],ill:82,
+ tx:[
+ "باضَتِ الدَّجاجَةُ أُمُّ كوكو عَشْرَ بَيْضاتٍ ، وحَضَنَتِ البَيْضَ ، ورَقَدَتْ عَلَيْهِ واحِداً وعِشْرينَ يَوْماً ، وانْتَظَرَتْ حَتّى يَفْقِسَ البَيْضُ.",
+ "خَرَجَتِ الدَّجاجَةُ تُفَتِّشُ عَنِ الطَّعامِ ، فَجاءَ أَرْنَبٌ صَغيرٌ يَلْعَبُ بِالكُرَةِ فَوَقَعَتِ الكُرَةُ على بَيْضِ الدَّجاجَةِ ، فَتَدَحْرَجَتْ بَيْضَةٌ في القَشِّ ، بَعيداً مِنَ البَيْضاتِ التِّسْعِ ، وسَمِعَ الأَرْنَبُ صَوْتَ قِشْرَةِ البَيْضَةِ تَتَكَسَّرُ ، فَاقْتَرَبَ مِنْها ورَأى فَرْخاً صَغيراً يَخْرُجُ مِنَ البَيْضَةِ ، ويَصيحُ: أُمّي ... أُمّي ، أَيْنَ أُمّي؟ أُريدُ أُمّي!",
+ "فَسَأَلَهُ الأَرْنَبُ الصَّغيرُ: مَنْ أَنْتَ؟ تَعالَ نَلْعَبْ بِالكُرَةِ.",
+ "رَفْرَفَ الفَرْخُ بِجَناحَيْهِ الصَّغيرَيْنِ وصاحَ: أَنا الصّوصُ كوكو. أَيْنَ أُمّي؟ أُريدُ أُمّي.",
+ "وأَخَذَ يَمْسَحُ ريشَهُ بِفِراءِ الأَرْنَبِ النّاعِمِ ، فَفَرِحَ الأَرْنَبُ بِصَديقِهِ الجَديدِ.",
+ "كانَتِ الدَّجاجَةُ تَبْكي على بَيْضَتِها ، فَسَمِعَ الدّيكُ بُكاءَها وصاحَ على الكَلْبِ وقالَ: هَيّا نَبْحَثْ عَنِ البَيْضَةِ.",
+ "نَبَحَ الكَلْبُ وقالَ لِلحِصانِ: هَيّا نَبْحَثْ عَنْ بَيْضَةِ أُمِّ كوكو.",
+ "صَهَلَ الحِصانُ وقالَ لِلحِمارِ: تَعالَ مَعي نَبْحَثْ عَنِ البَيْضَةِ.",
+ "نَهَقَ الحِمارُ وقالَ: هَيّا بِنا ، أَسْرِعوا نَبْحَثْ عَنِ البَيْضَةِ.",
+ "مَرَّ الدّيكُ بِالأَرْنَبِ مُسْرِعاً ، فَقالَ لَهُ الأَرْنَبُ: عَلامَ تَرْكُضُ يا صَديقي؟ تَعالَ نَلْعَبْ مَعاً. أَنا وأَنْتَ وصَديقي الصّوصُ كوكو.",
+ "قالَ الدّيكُ بِصَوْتٍ حَزينٍ: لَقَدْ ضاعَتْ بَيْضَةُ الدَّجاجَةِ أُمِّ كوكو."
+ ]}
+);
+// batch 11: pages 85-92
+LS.find(x=>x.id=="rabbit").tx.push(
+ "وأَنا الآنَ أَبْحَثُ عَنْها.",
+ "جاءَ الكَلْبُ والحِصانُ والحِمارُ فَوَقَفوا يَنْظُرونَ إلى الأَرْنَبِ والدّيكِ والصّوصِ.",
+ "وجاءَتِ الدَّجاجَةُ مُسْرِعَةً تَصيحُ بِلَهْفَةٍ: فَرْخي .. فَرْخي ، حَبيبي كوكو. أَيْنَ وَجَدْتُموهُ؟",
+ "واحْتَضَنَتِ الصّوصَ وسَأَلَتِ الدّيكَ: لِماذا لَمْ تُخْبِرْني بِأَنَّكُمْ وَجَدْتُمْ فَرْخي؟",
+ "فَأَجابَ الدّيكُ مُسْتَغْرِباً: كُنّا نَبْحَثُ عَنْ بَيْضَتِكِ ، لا عَنْ فَرْخِكِ!",
+ "قالَتِ الدَّجاجَةُ: شُكْراً لَكُمْ جَميعاً يا أَصْدِقائي."
+);
+LS.push(
+{id:"kite",t:"الطَّيّارَةُ الوَرَقِيَّةُ",k:"lesson",p:[88,89,90],ill:88,
+ tx:[
+ "أَحْضَرَ سَعيدٌ وَرَقَةً كَبيرَةً على شَكْلِ مُرَبَّعٍ وشَرائِطَ مُلَوَّنَةً وأَعْطَتْهُ أُمُّهُ خَيْطاً طَويلاً لَفَّهُ على أُنْبوبٍ قَصيرٍ.",
+ "ثُمَّ أَحْضَرَ قَليلاً مِنَ الصَّمْغِ ، وطَلَبَ إلى أَخيهِ الكَبيرِ أَنْ يُساعِدَهُ على صُنْعِ طَيّارَةٍ مِنَ الوَرَقِ ، لِيَلْعَبَ بِها مَعَ أَصْدِقائِهِ.",
+ "فَرِحَ سَعيدٌ بِطَيّارَتِهِ الجَميلَةِ ، فَسَأَلَ أَخاهُ قائِلاً: كَيْفَ تَطيرُ الطَّيّارَةُ يا أَخي؟",
+ "قالَ لَهُ أَخوهُ: عِنْدَما نَرْبِطُ الوَرَقَةَ بِالخَيْطِ مِنْ وَسَطِها ، نَسْحَبُ الخَيْطَ ونَرْكُضُ فَيَتَحَرَّكُ الهَواءُ ، ويَدْفَعُ الوَرَقَةَ مِنْ أَسْفَلِها. وكُلَّما زادَتْ سُرْعَتُنا في الرَّكْضِ زادَتْ حَرَكَةُ الهَواءِ ، ورَفَعَ الطَّيّارَةَ إلى الأَعْلى شَيْئاً فَشَيْئاً ، حَتّى نَراها تُحَلِّقُ في الفَضاءِ كَما تُحَلِّقُ الطُّيورُ.",
+ "قالَ سَعيدٌ: ولِماذا نَعْمَلُ ذَيْلاً لَها؟",
+ "قالَ أَخوهُ: إِنَّ الذَّيْلَ يُساعِدُ الطَّيّارَةَ على التَّوازُنِ.",
+ "قالَ سَعيدٌ: لَقَدْ ساعَدْتَني في صُنْعِ طَيّارَتي ، وعَلَّمْتَني كَيْفَ تَطيرُ فَشُكْراً لَكَ."
+ ]},
+
+{id:"builder",t:"المِعْمارُ الصَّغيرُ",k:"poem",p:[91],ill:91,
+ tx:[
+ "لي قِطَعٌ مِنْ خَشَبْ ، أَلْهو بِها في اللَّعِبْ",
+ "أَصُفُّها .. فَتَنْتَظِمْ ، ثُمَّ جَميعاً .. تَنْهَدِمْ",
+ "هَيّا انْظُروا بِنائي ، فَتَعْرِفوا ذَكائي",
+ "أَبْني لَكُمْ بَيْتَ الهَنا ، هَلْ تَعْرِفونَ مَنْ أَنا",
+ "إِنّي أَنا المِعْمارُ ، صَفِّقوا .. يا صِغارُ"
+ ]},
+
+{id:"birds",t:"الطُّيورُ",k:"expr",p:[92],
+ tx:[
+ "الحَمامُ والدَّجاجُ والإوَزُّ والبَطُّ مِنَ الطُّيورِ الأَليفَةِ. تُعْطينا البَيْضَ واللَّحْمَ والرّيشَ.",
+ "وتوجَدُ طُيورٌ مائِيَّةٌ مِثْلُ البَطِّ والإوَزِّ واللَّقْلَقِ ومالِكِ الحَزينِ ، تَعيشُ في الأَنْهارِ والبُحَيْراتِ والأَهْوارِ.",
+ "العَصافيرُ والبَلابِلُ تَعيشُ في البَساتينِ والمَزارِعِ ، تُغَرِّدُ وتُزَقْزِقُ وتَبْني أَعْشاشَها على الأَشْجارِ.",
+ "وتوجَدُ طُيورٌ جارِحَةٌ مِثْلُ النَّسْرِ والبومِ والصَّقْرِ ، تَعيشُ في كُهوفِ الجِبالِ والغاباتِ والخَرائِبِ."
+ ],
+ khat:"كُلُّ القُرى والمُدُنِ في بِلادِنا جَميلَةٌ."}
+);
+// batch 12: pages 93-99
+LS.push(
+{id:"bear",t:"نَظّاراتُ الدُّبِّ أَبي فَهْدٍ",k:"lesson",p:[93,94,95,96,97,98],ill:93,
+ tx:[
+ "جاءَتِ الدَّجاجَةُ الصَّغيرَةُ ، تَرْكُضُ بِرِجْلَيْها الصَّغيرَتَيْنِ ، إلى بَيْتِ العَمِّ الدُّبِّ أَبي فَهْدٍ ، وطَرَقَتِ البابَ ونادَتْ:",
+ "يا عَمّي يا أَبا فَهْدٍ ، هَلْ تُريدُ أَنْ تَخْرُجَ لِلنُّزْهَةِ في الغابَةِ؟ في الغابَةِ أَشْجارٌ وحَيَواناتٌ وطُيورٌ كَثيرَةٌ.",
+ "فَفَتَحَ العَمُّ الدُّبُّ أَبو فَهْدٍ البابَ قَليلاً ، وهَزَّ رَأْسَهُ وقالَ: يا أَيَّتُها الدَّجاجَةُ ، لا أَقْدِرُ أَنْ أَخْرُجَ لِلنُّزْهَةِ ، لأَنَّني ضَيَّعْتُ نَظّاراتي.",
+ "قالَتِ الدَّجاجَةُ: لا تَحْزَنْ يا أَبا فَهْدٍ. سَأُفَتِّشُ لَكَ عَنْ نَظّاراتِكَ.",
+ "ذَهَبَتِ الدَّجاجَةُ الصَّغيرَةُ ، تَرْكُضُ حَتّى جاءَتْ إلى الدُّبَّةِ أُمِّ غُزَيْلانَ ، وأَوْلادِها الدُّبَيَّةِ الصِّغارِ ، غُزَيْلانَ وكُحَيْلانَ وسُعَيْدانَ.",
+ "فَقالَتْ لَهُمْ وهِيَ تَبْكي: لَقَدْ ضَيَّعَ المِسْكينُ أَبو فَهْدٍ نَظّاراتِهِ ، وهُوَ لا يَقْدِرُ بَعْدَ الآنَ على أَنْ يَخْرُجَ مِنْ بَيْتِهِ لِلنُّزْهَةِ.",
+ "فَقالَ الدُّبَيَّةُ الثَّلاثَةُ الصِّغارُ كُلُّهُمْ مَرَّةً واحِدَةً: لا تَبْكي يا أَيَّتُها الدَّجاجَةُ. لِنَذْهَبْ فَنُفَتِّشَ عَنْها.",
+ "فَذَهَبوا وفَتَّشوا عَنْها هُنا وفَتَّشوا هُناكَ ، وفَتَّشوا في كُلِّ مَكانٍ فَلَمْ يَجِدوها.",
+ "فَقالَتْ لَهُمْ أُمُّهُمُ الدُّبَّةُ أُمُّ غُزَيْلانَ: لا تَبْكوا يا أَوْلادي. تَعالَوْا نَذْهَبْ إلى الكَلْبِ حُدَيْدانَ فَلَعَلَّهُ يَقْدِرُ على أَنْ يَجِدَها. ذَهَبَ الجَميعُ إلى الكَلْبِ حُدَيْدانَ فَقالَ: أَنا أُفَتِّشُ عَنْها.",
+ "ذَهَبَ الكَلْبُ وفَتَّشَ هُنا ، وفَتَّشَ هُناكَ. وبَعْدَ قَليلٍ رَجَعَ الكَلْبُ يَرْكُضُ ويَصيحُ: وَجَدْتُها ... وَجَدْتُها. رَكَضَ الجَميعُ فَرَأَوُا النَّظّاراتِ في يَدِ حُدَيْدانَ ، فَفَرِحوا فَرَحاً عَظيماً ثُمَّ ذَهَبوا إلى بَيْتِ الدُّبِّ أَبي فَهْدٍ.",
+ "فَقامَ الدُّبُّ أَبو فَهْدٍ وفَتَحَ البابَ قَليلاً قَليلاً ، ولَمّا رَأى النَّظّاراتِ قالَ: هذِهِ لَيْسَتْ نَظّاراتي. فَهذِهِ النَّظّاراتُ حُمْرٌ ونَظّاراتي خُضْرٌ.",
+ "وبَيْنَما هُمْ واقِفونَ جاءَهُمْ صَبِيٌّ اسْمُهُ حَمْدانُ وسَأَلَهُمْ: ما بِكُمْ؟ فَأَخْبَروهُ بِما جَرى. نَظَرَ الصَّبِيُّ حَمْدانُ إلى الدُّبِّ أَبي فَهْدٍ ، وأَخَذَ يَضْحَكُ بِصَوْتٍ مُرْتَفِعٍ. فَغَضِبوا وقالوا لَهُ: لِماذا تَضْحَكُ؟",
+ "فَأَجابَهُمُ الصَّبِيُّ حَمْدانُ قائِلاً: إِنَّ الدُّبَّ أَبا فَهْدٍ لَمْ يُضَيِّعْ نَظّاراتِهِ ، اُنْظُروا إلى رَأْسِهِ تَرَوُا النَّظّاراتِ عَلَيْهِ.",
+ "فَمَدَّ العَمُّ الدُّبُّ أَبو فَهْدٍ يَدَهُ إلى رَأْسِهِ فَوَجَدَ نَظّاراتِهِ.",
+ "ضَحِكَ الجَميعُ ضَحِكاً عالِياً. ضَحِكوا كُلُّهُمْ على حالِ العَمِّ الدُّبِّ أَبي فَهْدٍ لأَنَّهُ نَسِيَ نَظّاراتِهِ على رَأْسِهِ.",
+ "وضَحِكَ العَمُّ الدُّبُّ أَبو فَهْدٍ على حالِهِ ، وخَرَجَ مَعَهُمْ لِلنُّزْهَةِ."
+ ],
+ khat:"لا نُضَيِّعُ الوَقْتَ بِالتَّفْتيشِ إِذا رَتَّبْنا أَشْياءَنا."},
+
+{id:"dubdoub",t:"دُبْدوبُ والحاسوبُ",k:"poem",p:[99],ill:99,
+ tx:[
+ "فَكَّرَ دُبْدوبُ المَحْبوبْ ، فَكَّرَ في أَمْرِ الحاسوبْ",
+ "راحَ إلى مَكْتَبَةِ الغابَةْ ، كَيْ يَعْرِفَ مِنْها المَطْلوبْ",
+ "فَتَصَفَّحَ في كُلِّ كِتابْ ، مِنْ مَرْسومٍ أَوْ مَكْتوبْ",
+ "فَتَوَصَّلَ لِلحَلِّ سَريعاً ، دُبْدوبُ الحُلْوُ المَوْهوبْ",
+ "لَمّا أَدْرَكَ أَنَّ العالَمَ ، يَبْحَثُ عَنْ شَيْءٍ مَرْغوبْ",
+ "عادَ يُحاوِلُ أَنْ يَتَعَلَّمَ ، كَيْفَ اسْتِعْمالُ الحاسوبْ"
+ ]},
+
+{id:"senses",t:"الحَواسُّ الخَمْسُ",k:"lesson",p:[100,101,102,103],ill:100,
+ tx:[
+ "قالَ حَسَنٌ: هذِهِ عَيْني ، بِالعَيْنِ أَسْتَطيعُ أَنْ أُبْصِرَ طَريقي وأَرى كُلَّ شَيْءٍ ، وأَسْتَطيعُ أَنْ أَقْرَأَ وأَكْتُبَ. العَيْنُ حاسَّةُ البَصَرِ.",
+ "وصاحَ عادِلٌ: هذِهِ أُذُني. بِالأُذُنِ أَسْمَعُ الأَصْواتَ ، فَأَسْمَعُ كَلامَ النّاسِ ، وأَسْمَعُ الأَناشيدَ والأَغاني الجَميلَةَ. الأُذُنُ حاسَّةُ السَّمْعِ.",
+ "قالَتْ هَيْفاءُ: هذا أَنْفي ، بِأَنْفي أَشُمُّ الرَّوائِحَ المُخْتَلِفَةَ ، فَأَشُمُّ رائِحَةَ الوَرْدِ ، ورائِحَةَ الطَّعامِ. الأَنْفُ حاسَّةُ الشَّمِّ.",
+ "وصاحَتْ إيمانُ: هذا لِساني ، بِلِساني أَذوقُ الأَشْياءَ ، فَأَعْرِفُ طَعْمَها ، وبِهِ أَعْرِفُ الحُلْوَ والمُرَّ. اللِّسانُ حاسَّةُ الذَّوْقِ.",
+ "قالَ هاشِمٌ: هذِهِ يَدي. بِيَدي أَلْمِسُ الأَشْياءَ فَأَعْرِفُ النّاعِمَ والخَشِنَ ، وأَعْرِفُ البارِدَ والسّاخِنَ. اليَدُ حاسَّةُ اللَّمْسِ.",
+ "قالَ الجَميعُ: نُحافِظُ على سَلامَةِ هذِهِ الحَواسِّ ، ونَعْتَني بِنَظافَتِها ونَبْتَعِدُ عَنِ الأَشْياءِ الَّتي تَضُرُّها."
+ ],
+ khat:"أَنا أَرى وأَسْمَعُ وأَشُمُّ وأَذوقُ وأَلْمِسُ وأُفَكِّرُ."},
+
+{id:"layla",t:"لَيْلى والذِّئْبُ",k:"lesson",p:[104,105,106,107],ill:104,
+ tx:[
+ "لَيْلى تِلْميذَةٌ مُجْتَهِدَةٌ مَحْبوبَةٌ ، تُسْرِعُ إلى البَيْتِ كُلَّ يَوْمٍ بَعْدَ انْتِهاءِ الدُّروسِ في المَدْرَسَةِ ، لِتُعاوِنَ أُمَّها في شُؤونِ البَيْتِ.",
+ "رَجَعَتْ بَعْدَ ظُهْرِ يَوْمٍ إلى البَيْتِ ، فَرَأَتْ كَعْكاً كَثيراً على المائِدَةِ ، فَسَأَلَتْ أُمَّها: لِمَنْ صَنَعْتِ هذا الكَعْكَ يا أُمّاهُ؟",
+ "قالَتْ: صَنَعْتُ هذا الكَعْكَ لِجَدَّتِكِ يا عَزيزَتي! فَهَلْ تُحِبّينَ أَنْ تَذْهَبي بِهِ إِلَيْها؟",
+ "قالَتْ لَيْلى: نَعَمْ يا أُمِّي العَزيزَةَ ، سَأَذْهَبُ لأُسَلِّمَ عَلَيْها ، وآخُذُ الكَعْكَ مَعي إِلَيْها.",
+ "سارَتْ لَيْلى وَحْدَها في الطَّريقِ ، وكانَ الطَّريقُ خالِياً مِنَ النّاسِ وإِذا بِذِئْبٍ خَبيثٍ يُفاجِئُ لَيْلى الصَّغيرَةَ ، فَيَسْأَلُها: أَيْنَ تَذْهَبينَ يا عَزيزَتي الصَّغيرَةَ؟",
+ "قالَتْ لَيْلى: أَنا ذاهِبَةٌ إلى جَدَّتي العَجوزِ ، لأُسَلِّمَ عَلَيْها ، وأُعْطِيَها هذا الكَعْكَ اللَّذيذَ الَّذي صَنَعَتْهُ أُمّي لَها.",
+ "قالَ الذِّئْبُ: وأَيْنَ تُقيمُ جَدَّتُكِ العَجوزُ؟",
+ "قالَتْ لَيْلى: إِنَّها تَسْكُنُ في ذلِكَ البَيْتِ الأَبْيَضِ الَّذي تَراهُ في آخِرِ هذا الطَّريقِ ، قُرْبَ الغابَةِ.",
+ "فَنَظَرَ الخَبيثُ إلى المَنْزِلِ الَّذي أَشارَتْ إِلَيْهِ لَيْلى ، فَعَرَفَهُ ، فَقالَ لَها: إِذا دَخَلْتِ على جَدَّتِكِ ، فَسَلِّمي لي عَلَيْها كَثيراً ، وقولي لَها إِنَّ ابْنَ أَخيكِ مُشْتاقٌ إِلَيْكِ كَثيراً.",
+ "وأَسْرَعَ إلى الدّارِ مِنْ طَريقٍ آخَرَ ، فَوَصَلَ إِلَيْها قَبْلَ أَنْ تَصِلَ إِلَيْها لَيْلى فَوَجَدَ البابَ مَفْتوحاً ، فَدَخَلَ الدّارَ وهَجَمَ على جَدَّةِ لَيْلى العَجوزِ لِيَفْتَرِسَها ، لكِنَّها فَرَّتْ مِنْ بابٍ آخَرَ ، بَعْدَ أَنْ أَصابَها بِجُروحٍ.",
+ "لَبِسَ الذِّئْبُ ثِيابَها ونامَ في الفِراشِ. ولَمّا وَصَلَتْ لَيْلى إلى دارِ جَدَّتِها نادَتْ بِأَعْلى صَوْتِها: جَدَّتي ، جَدَّتي! افْتَحي البابَ يا جَدَّتي! لَقَدْ أَرْسَلَتْني أُمّي بِهذا الكَعْكِ إِلَيْكِ.",
+ "فَقالَ لَها الذِّئْبُ الخَبيثُ بِصَوْتٍ خائِفٍ: اُدْخُلي يا عَزيزَتي لَيْلى ، فَإِنَّ البابَ مَفْتوحٌ.",
+ "فَدَخَلَتْ لَيْلى الدّارَ ، وظَنَّتْ أَنَّ جَدَّتَها مُضْطَجِعَةٌ على سَريرِها لِتَسْتَريحَ ، فَأَسْرَعَتْ إِلَيْها فَرِحَةً ضاحِكَةً لِتُعْطِيَها الكَعْكَ ، وهِيَ تَقولُ لَها: خُذي هذا الكَعْكَ يا جَدَّتي إِنَّهُ كَعْكٌ لَذيذٌ صَنَعَتْهُ لَكِ أُمّي.",
+ "فَقالَ الذِّئْبُ الخَبيثُ: ضَعي الكَعْكَ هُناكَ يا لَيْلى! وتَعالَيْ نامي مَعي يا ابْنَتي الحَبيبَةَ.",
+ "فَوَضَعَتْ لَيْلى الكَعْكَ على المائِدَةِ ، وذَهَبَتْ إلى الفِراشِ ، فَلاحَتْ لَها أَسْنانُ الذِّئْبِ الطَّويلَةُ ، فَظَنَّتْها أَسْنانَ جَدَّتِها ، فَتَعَجَّبَتْ مِمّا رَأَتْ وقالَتْ: ما بالُ أَسْنانِكِ طَويلَةً يا جَدَّتي؟",
+ "فَقالَ لَها الذِّئْبُ بِصَوْتٍ مُخيفٍ: لآكُلَكِ بِها!",
+ "فَأَدْرَكَتْ لَيْلى أَنَّهُ الذِّئْبُ ، فَفَزِعَتْ وصَرَخَتْ مُسْتَنْجِدَةً مُسْتَغيثَةً.",
+ "وكانَ خالُها قَدِ ازْدادَ شَوْقُهُ إلى أُمِّهِ في ذلِكَ اليَوْمِ ، فَأَتى بَيْتَها. فَلَمّا وَصَلَ إلى البابِ سَمِعَ صُراخَ لَيْلى ، وهِيَ تَسْتَغيثُ مِنَ الذِّئْبِ الَّذي هَجَمَ على جَدَّتِها ، فَأَسْرَعَ إِلَيْهِ وضَرَبَهُ بِالعَصا فَهَرَبَ الذِّئْبُ ، ونَجَتْ لَيْلى مِنَ المَوْتِ."
+ ],
+ w:[["مُجْتَهِدَةٌ","تَبْذُلُ جُهْدَها في الدِّراسَةِ"],["تَسْتَغيثُ","تَطْلُبُ النَّجْدَةَ"],["الخَبيثُ","الشِّرِّيرُ"]]}
+);
+// batch 13: pages 109-116
+LS.push(
+{id:"sister",t:"أُخْتِيَ الكُبْرى",k:"poem",p:[110],ill:110,
+ tx:[
+ "أُخْتِيَ الكُبْرى ما أَحْسَنَها ، قَدْ غَمَرَتْني بِمَحَبَّتِها",
+ "فَإِذا غابَتْ أُمّي عَنّي ، قامَتْ أُخْتي بِوَظيفَتِها",
+ "تَأْتي صُبْحاً وتُنَبِّهُني ، وتُصَبِّحُني بِبَشاشَتِها",
+ "وتُنَظِّفُني وتُلَبِّسُني ، وتُساعِدُني بِعِنايَتِها",
+ "وتُهَيِّئُ لي ما آكُلُهُ ، وتُواسيني بِلَطافَتِها"
+ ]},
+{id:"transport",t:"وَسائِلُ النَّقْلِ",k:"expr",p:[111],
+ tx:[
+ "كانَ الإِنْسانُ في قَديمِ الزَّمانِ يُسافِرُ مِنْ مَكانٍ إلى آخَرَ على ظُهورِ الحَيَواناتِ ، كالجَمَلِ والحِصانِ والبَغْلِ.",
+ "وفي الأَنْهارِ كانَ الإِنْسانُ يَسْتَعْمِلُ الزَّوْرَقَ.",
+ "اليَوْمَ يَسْتَعْمِلُ النّاسُ السَّيّارَةَ والقِطارَ والدَّرّاجاتِ والطّائِرَةَ والسَّفينَةَ والباخِرَةَ.",
+ "فَأَصْبَحَ السَّفَرُ سَهْلاً. يَصِلُ الإِنْسانُ إلى المَكانِ الَّذي يُريدُهُ بِسُرْعَةٍ.",
+ "أَنا أُحِبُّ السَّفَرَ."
+ ],
+ khat:"أَصْبَحَ السَّفَرُ سَهْلاً ومُريحاً."},
+{id:"sport",t:"أُحِبُّ الرِّياضَةَ",k:"lesson",p:[112,113,114,115],ill:112,
+ tx:[
+ "سَأَلَتْ مُعَلِّمَةُ الرِّياضَةِ الأَطْفالَ: ما الرِّياضَةُ الَّتي تُحِبّونَها؟",
+ "قالَ سَميرٌ: أُحِبُّ لُعْبَةَ كُرَةِ القَدَمِ ، لأَنَّها تُعَلِّمُني سُرْعَةَ الحَرَكَةِ وتُعَلِّمُني التَّعاوُنَ مَعَ أَصْدِقائي ، فَالفَريقُ المُتَعاوِنُ هُوَ الفَريقُ الَّذي يَفوزُ.",
+ "قالَتْ هَيْفاءُ: أُحِبُّ لُعْبَةَ القَفْزِ على الحَبْلِ ، لأَنَّها تَجْعَلُني أَطيرُ في الهَواءِ مِثْلَ الطَّيْرِ.",
+ "قالَ سِنانٌ: أُحِبُّ السِّباحَةَ لأَنَّها تُقَوّي جِسْمي. وقَدْ تَعَلَّمْتُها في مَسْبَحِ المَدينَةِ.",
+ "قالَتْ جَميلَةُ: أُحِبُّ لُعْبَةَ القِطارِ ، فَهِيَ تُعَلِّمُنا حُبَّ السَّفَرِ.",
+ "قالَتِ المُعَلِّمَةُ: شُكْراً لَكُمْ ، أَلْعابُكُمْ مُفيدَةٌ ومُسَلِّيَةٌ ، الأَلْعابُ الرِّياضِيَّةُ تُقَوّي الأَجْسامَ ، وتُنَشِّطُ العُقولَ ، وتُعَلِّمُنا حُبَّ التَّعاوُنِ وحُبَّ النِّظامِ. أُريدُ أَنْ تُحِبّوا الرِّياضَةَ لِتَعيشوا سُعَداءَ أَقْوِياءَ."
+ ],
+ khat:"الفَريقُ المُتَعاوِنُ والمُدَرِّبُ والمُنَظِّمُ هُوَ الَّذي يَفوزُ."},
+{id:"team",t:"المُحادَثَةُ: الفَريقُ الفائِزُ",k:"expr",p:[116],
+ tx:[
+ "المُعَلِّمُ: كَيْفَ يَفوزُ الفَريقُ في لُعْبَةِ القَدَمِ؟",
+ "سَعْدٌ: إِذا تَعاوَنَ أَعْضاءُ الفَريقِ. فَالفَريقُ المُتَعاوِنُ هُوَ الَّذي يَفوزُ.",
+ "عَلِيٌّ: إِذا تَدَرَّبَ أَعْضاءُ الفَريقِ تَدْريباً جَيِّداً. فَالفَريقُ المُدَرَّبُ هُوَ الَّذي يَفوزُ.",
+ "هَيْفاءُ: إِذا احْتَرَمَ أَعْضاءُ الفَريقِ النِّظامَ ، وأَطاعوا المُدَرِّبَ. فَالفَريقُ المُنَظَّمُ هُوَ الَّذي يَفوزُ.",
+ "المُعَلِّمُ: أَشْكُرُكُمْ كَثيراً. الفَريقُ المُتَعاوِنُ والمُدَرَّبُ والمُنَظَّمُ هُوَ الَّذي يَفوزُ."
+ ]},
+{id:"clean3",t:"النَّظافَةُ",k:"expr",p:[115],
+ tx:[
+ "كانَ عادِلٌ يَسيرُ في أَحَدِ الشَّوارِعِ ، فَأَخْرَجَ مِنْ جَيْبِهِ وَرَقَةً وقَرَأَها ثُمَّ مَزَّقَها ورَماها على الأَرْضِ ، فَاقْتَرَبَتْ مِنْهُ امْرَأَةٌ ووَضَعَتْ يَدَها على كَتِفِهِ وقالَتْ لَهُ:",
+ "لَوْ أَنَّ كُلَّ إِنْسانٍ رَمى وَرَقَةً في الشّارِعِ ، لأَصْبَحَ الشّارِعُ وَسِخاً.",
+ "قالَ عادِلٌ: أَنا آسِفٌ ثُمَّ جَمَعَ ما رَماهُ ووَضَعَهُ في سَلَّةِ الأَوْساخِ."
+ ]}
+);
+LS.push(
+{id:"sesame",t:"اِفْتَحْ يا سِمْسِمُ",k:"lesson",p:[117,118,119,120],ill:117,
+ tx:[
+ "كانَ في قَديمِ الزَّمانِ ، رَجُلٌ اسْمُهُ عَلي بابا. رَكِبَ عَلي بابا حِمارَهُ وذَهَبَ إلى الغابَةِ لِيَجْمَعَ الحَطَبَ.",
+ "رَأى عَلي بابا مِنْ بَعيدٍ أَرْبَعينَ رَجُلاً يَقِفونَ أَمامَ مَغارَةٍ يَتَحَدَّثونَ عَنْ أَمْوالٍ مَسْروقَةٍ.",
+ "سَمِعَ أَحَدَهُمْ يَصيحُ: (( اِفْتَحْ يا سِمْسِمُ )) اِنْفَتَحَ بابُ المَغارَةِ ودَخَلَ الرِّجالُ المَغارَةَ ثُمَّ خَرَجوا مِنْها بَعْدَ قَليلٍ فَصاحَ رَجُلٌ: (( أَغْلِقْ يا سِمْسِمُ )) فَانْغَلَقَ بابُ المَغارَةِ.",
+ "اِنْتَظَرَ عَلي بابا حَتّى ابْتَعَدَ الرِّجالُ ثُمَّ تَقَدَّمَ مِنَ المَغارَةِ وصاحَ: (( اِفْتَحْ يا سِمْسِمُ )) فَانْفَتَحَ البابُ ، ودَخَلَ عَلي بابا المَغارَةَ فَوَجَدَ أَكْياساً فيها ذَهَبٌ وفِضَّةٌ ، وعَرَفَ أَنَّ الرِّجالَ الَّذينَ رَآهُمْ لُصوصٌ.",
+ "فَخَرَجَ مِنَ المَغارَةِ وصاحَ: (( أَغْلِقْ يا سِمْسِمُ )) فَانْغَلَقَ بابُ المَغارَةِ.",
+ "أَسْرَعَ عَلي بابا إلى المَدينَةِ فَأَخْبَرَ حاكِمَ المَدينَةِ عَنِ اللُّصوصِ. أَرْسَلَ حاكِمُ المَدينَةِ جُنودَهُ إلى المَغارَةِ.",
+ "وقَفَ عَلي بابا مَعَ الجُنودِ أَمامَ المَغارَةِ وصاحَ: (( اِفْتَحْ يا سِمْسِمُ )) فَانْفَتَحَ البابُ ودَخَلَ الجُنودُ وقَبَضوا على اللُّصوصِ ، ثُمَّ حَمَلوا أَكْياسَ الذَّهَبِ والفِضَّةِ وعادوا بِها إلى حاكِمِ المَدينَةِ.",
+ "فَرِحَ حاكِمُ المَدينَةِ وقالَ: هذِهِ أَمْوالٌ مَسْروقَةٌ ، نُعيدُها إلى أَصْحابِها. أَنْتَ شُجاعٌ وأَمينٌ يا عَلي بابا. ثُمَّ شَكَرَهُ حاكِمُ المَدينَةِ على شَجاعَتِهِ وأَمانَتِهِ.",
+ "عاشَ عَلي بابا مَسْروراً وعاشَ النّاسُ مَسْرورينَ آمِنينَ."
+ ],
+ w:[["مَغارَةٌ","كَهْفٌ في الجَبَلِ"],["الحَطَبُ","أَغْصانٌ يابِسَةٌ تُحْرَقُ"],["أَمينٌ","صادِقٌ لا يَخونُ"]]}
+);
+// batch 14: pages 121-124
+LS.push(
+{id:"photos",t:"صُوَرٌ",k:"poem",p:[121],ill:121,
+ tx:[
+ "عَلَّقْتُ في بَيْتي صُوَرْ ، تُعْجِبُ كُلَّ مَنْ نَظَرْ",
+ "فَصورَةٌ لِزَوْرَقٍ ، يَسْبَحُ في وَسَطِ النَّهَرْ",
+ "وصورَةٌ لِغابَةٍ ، فيها تَشابُكُ الشَّجَرْ",
+ "وصورَةٌ لِرَوْضَةٍ ، تَزْهو بِأَلْوانِ الزَّهَرْ",
+ "وصورَةٌ لِنَخْلَةٍ ، أُحِبُّها مُنْذُ الصِّغَرْ",
+ "لأَنَّها كَريمَةٌ ، وتَمْرُها أَحْلى ثَمَرْ",
+ "وصورَةٌ لِطِفْلَةٍ ، تَطْلُبُ مِنْ رَبِّ البَشَرْ",
+ "رَبّاهُ سَلِّمْ أَبَتي ، واحْفَظْهُ مِنْ كُلِّ ضَرَرْ"
+ ]},
+{id:"mail",t:"البَريدُ",k:"expr",p:[122],
+ tx:[
+ "أَنا أَكْتُبُ رِسالَةً أَبْعَثُها إلى صَديقي. أَضَعُها داخِلَ الظَّرْفِ.",
+ "وأَذْهَبُ بِها إلى دائِرَةِ البَريدِ ، أَلْصِقُ على الظَّرْفِ طابِعاً وأَكْتُبُ عَلَيْهِ العُنْوانَ ، ثُمَّ أَضَعُ الظَّرْفَ في صُنْدوقِ البَريدِ.",
+ "تَقومُ دائِرَةُ البَريدِ بِإِرْسالِ الرِّسالَةِ ، إلى المَدينَةِ الَّتي يَسْكُنُ فيها صَديقي.",
+ "يَأْخُذُ ساعي البَريدِ الرِّسالَةَ ، ويُسَلِّمُها إلى صَديقي.",
+ "أَنا أُحِبُّ ساعِيَ البَريدِ.",
+ "وبِفَضْلِ التَّطَوُّرِ والتَّقَدُّمِ تَصِلُ الرِّسالَةُ بِسُرْعَةٍ إلى أَنْحاءِ العالَمِ بِواسِطَةِ أَجْهِزَةِ الجَوّالِ والحاسوبِ."
+ ],
+ khat:"أُحِبُّ ساعِيَ البَريدِ ، الَّذي يوصِلُ الرَّسائِلَ إلى الأَهْلِ والأَصْدِقاءِ."},
+{id:"hare",t:"الأَرْنَبُ المَغْرورُ والسُّلَحْفاةُ",k:"lesson",p:[123,124,125,126],ill:123,
+ tx:[
+ "كانَ أَرْنَبٌ يَعيشُ في مَغارَةٍ قُرْبَ النَّهْرِ ، وكانَتْ تَعيشُ جَنْبَ المَغارَةِ سُلَحْفاةٌ.",
+ "وفي يَوْمٍ مِنَ الأَيّامِ قالَ الأَرْنَبُ: يا صَديقَتي السُّلَحْفاةُ ، ماذا نَأْكُلُ اليَوْمَ؟",
+ "قالَتِ السُّلَحْفاةُ: هُناكَ تَحْتَ شَجَرَةِ التّينِ جَزَرٌ كَثيرٌ ، تَعالَ نَذْهَبْ بِسُرْعَةٍ ونَأْكُلْهُ.",
+ "قالَ الأَرْنَبُ: لا أُريدُ أَنْ أَذْهَبَ الآنَ ، أُريدُ أَنْ أَرْكُضَ وأَلْعَبَ. اِذْهَبي أَنْتِ وسَأَحْضُرُ بَعْدَ قَليلٍ ، وسَوْفَ أَصِلُ قَبْلَكِ لأَنَّني أُسْرِعُ مِنْكِ.",
+ "قالَتِ السُّلَحْفاةُ: أَنا ذاهِبَةٌ ، وسَوْفَ تَرى مَنْ يَسْبِقُ.",
+ "مَشَتِ السُّلَحْفاةُ ومَشَتْ ، ولَمْ تَقِفْ في الطَّريقِ ، ولَمْ تَلْعَبْ.",
+ "لَعِبَ الأَرْنَبُ ولَعِبَ ولَعِبَ وضَيَّعَ الوَقْتَ ، وأَرادَ أَنْ يَنامَ ، لكِنَّ النَّسْرَ هاجَمَهُ فَبَدَأَ يَرْكُضُ ويَرْكُضُ.",
+ "كانَتْ شَجَرَةُ التّينِ بَعيدَةً ، ورَأى الأَرْنَبُ السُّلَحْفاةَ تَقْتَرِبُ مِنَ الشَّجَرَةِ ، فَأَخَذَ يُسْرِعُ ويُسْرِعُ.",
+ "وَصَلَتِ السُّلَحْفاةُ إلى شَجَرَةِ التّينِ وأَخَذَتْ تَأْكُلُ الجَزَرَ. أَكَلَتِ السُّلَحْفاةُ وشَبِعَتْ.",
+ "وَصَلَ الأَرْنَبُ مُتَأَخِّراً فَلَمْ يَجِدِ الجَزَرَ. ضَحِكَتِ السُّلَحْفاةُ وقالَتْ: أَنْتَ لَعِبْتَ وتَأَخَّرْتَ وأَنا سَبَقْتُ ، وأَكَلْتُ."
+ ],
+ w:[["المَغْرورُ","المُعْجَبُ بِنَفْسِهِ"],["سَبَقَ","وَصَلَ قَبْلَ غَيْرِهِ"]],
+ khat:"مَنْ جَدَّ وَجَدَ ومَنْ زَرَعَ حَصَدَ."}
+);
+LS.push(
+{id:"sun",t:"الشَّمْسُ",k:"lesson",p:[127,128,129,130],ill:127,
+ tx:[
+ "الشَّمْسُ نَجْمٌ مُضيءٌ ، وهِيَ كُرَةٌ كَبيرَةٌ مُلْتَهِبَةٌ أَكْبَرُ مِنَ الأَرْضِ مَلايينَ المَرّاتِ.",
+ "ولَوْلا الشَّمْسُ لانْتَهَتْ حَياةُ الإِنْسانِ والحَيَوانِ والنَّباتِ. هِيَ مَصْدَرُ النّورِ ، تُرْسِلُ أَشِعَّتَها إلى مياهِ البِحارِ ، فَيَتَحَوَّلُ قِسْمٌ مِنَ الماءِ إلى بُخارٍ ، يَحْمِلُهُ الهَواءُ إلى أَعالي الجَوِّ في السَّماءِ.",
+ "فَتَتَكَوَّنُ الغُيومُ الَّتي تَنْزِلُ على الأَرْضِ مَطَراً ، فَيُنْبِتُ النَّباتُ ، وتَجْري الأَنْهارُ والجَداوِلُ ، ويَتَدَفَّقُ الماءُ مِنَ اليَنابيعِ والآبارِ.",
+ "وعِنْدَما يَنْزِلُ المَطَرُ نَرى الطَّيْفَ الشَّمْسِيَّ ، إِنَّهُ جَميلٌ لَهُ سَبْعَةُ أَلْوانٍ ، البَنَفْسَجِيُّ والنِّيلِيُّ والأَزْرَقُ والأَخْضَرُ والأَصْفَرُ والبُرْتُقالِيُّ والأَحْمَرُ.",
+ "سَأَلَتْ لَيْلى مُعَلِّمَتَها: ما سَبَبُ هذِهِ الأَلْوانِ؟",
+ "قالَتِ المُعَلِّمَةُ: إِنَّ لَوْنَ أَشِعَّةِ الشَّمْسِ مُرَكَّبٌ مِنْ سَبْعَةِ أَلْوانٍ. لكِنَّها مُمْتَزِجَةٌ مَعاً ، فَإِذا انْعَكَسَتِ الأَشِعَّةُ في نُقَطِ المَطَرِ المُتَساقِطَةِ ، فَإِنَّها تَنْحَلُّ إلى أَلْوانِها السَّبْعَةِ الأَصْلِيَّةِ.",
+ "قالَتْ لَيْلى: أَنا أُحِبُّ أَشِعَّةَ الشَّمْسِ لأَنَّها تُعْطينا الضَّوْءَ والحَرارَةَ ، وأُمّي أَيْضاً تُحِبُّها.",
+ "فَهِيَ تَفْتَحُ نَوافِذَ بَيْتِنا كُلَّ صَباحٍ لِتَدْخُلَ أَشِعَّةُ الشَّمْسِ إلى الغُرَفِ ، فَتَقْتُلَ الجَراثيمَ الَّتي تُسَبِّبُ الأَمْراضَ ، وعِنْدَما نَغْسِلُ المَلابِسَ ، ونَنْشُرَها على حَبْلِ الغَسيلِ ، تَجِفُّ بِسُرْعَةٍ بِفَضْلِ أَشِعَّةِ الشَّمْسِ. إِنَّها نِعْمَةٌ مِنَ اللَّهِ تَعالى."
+ ],
+ khat:"أَشِعَّةُ الشَّمْسِ نِعْمَةٌ مِنْ نِعَمِ اللَّهِ تَعالى عَلَيْنا.",
+ w:[["مُلْتَهِبَةٌ","مُشْتَعِلَةٌ"],["الطَّيْفُ","ألوانُ قَوْسِ المَطَرِ"],["تَنْحَلُّ","تَتَفَرَّقُ"]]}
+);
+LS.push(
+{id:"sunpoem",t:"الطِّفْلُ والشَّمْسُ",k:"poem",p:[132],ill:132,
+ tx:[
+ "الطِّفْلُ: يا شَمْسُ يا أُمَّ الشُّهُبْ ، أُمَّ الضِّياءِ واللَّهَبْ",
+ "أَيْنَ تَنامينَ إِذا ، غابَ النَّهارُ واحْتَجَبْ",
+ "الشَّمْسُ: كَلّا فَإِنّي لَمْ أَنَمْ ، لكِنَّني مُنْذُ القِدَمْ",
+ "مِثْلَ السِّراجِ أَشْتَعِلْ ، وفي السَّماءِ أَنْتَقِلْ",
+ "الطِّفْلُ: إِذَنْ لِماذا يَخْتَبي ، ضَوْؤُكِ بَعْدَ المَغْرِبِ",
+ "ولا نَراكِ عِنْدَما ، يُمْسي الفَضاءُ مُظْلِما",
+ "هَلْ لَكِ عِنْدَ غَيْرِنا ، أَرْضٌ كَمِثْلِ أَرْضِنا",
+ "الشَّمْسُ: إِذا غَرَبْتُ عِنْدَكُمْ ، رُحْتُ أَزورُ غَيْرَكُمْ",
+ "إِنَّ المَسا غَيَّبَنا ، هُناكَ شَمْسٌ وسَنا"
+ ]}
+);
+// batch 15: pages 133-136
+LS.push(
+{id:"crafts",t:"أَصْحابُ الحِرَفِ",k:"expr",p:[133],
+ tx:[
+ "النَّسّاجُ ، والسَّقّاءُ ، والنَّدّافُ ، والحائِكُ ، وصانِعُ الفَخّارِ وصانِعُ الأَطْباقِ ، وصانِعُ الزَّوارِقِ ، مِنْ أَصْحابِ الحِرَفِ والمِهَنِ القَديمَةِ.",
+ "نُسَمِّيها (الصِّناعاتِ الشَّعْبِيَّةَ) نَراها في تَماثيلَ مَحْفوظَةٍ في (المَتْحَفِ البَغْدادِيِّ).",
+ "صانِعُ الفَخّارِ يَصْنَعُ الجَرَّةَ والكوزَ مِنَ الطّينِ ويَفْخَرُهُما في النّارِ.",
+ "والنَّسّاجُ يَصْنَعُ البِساطَ والعَباءَةَ بِالمِسَدَّاةِ (الجوزَةِ).",
+ "صانِعُ الأَطْباقِ يَصْنَعُ الأَطْباقَ مِنْ خوصِ النَّخيلِ.",
+ "والنَّدّافُ يَصْنَعُ الفِراشَ مِنَ الصّوفِ والقُطْنِ."
+ ],
+ khat:"إِنَّما خُلِقَ الإِنْسانُ لِيَعْمَلَ كَما خُلِقَ العُصْفورُ لِيَطيرَ."},
+{id:"mouse",t:"الفَأْرَةُ الصَّغيرَةُ والأَسَدُ",k:"lesson",p:[134,135,136,137,138],ill:134,
+ tx:[
+ "كانَتْ فَأْرَةٌ صَغيرَةٌ تَعيشُ في الغابَةِ ، وفي أَحَدِ الأَيّامِ قالَتْ: الشَّمْسُ طالِعَةٌ ، والجَوُّ لَطيفٌ في الغابَةِ ، سَأَلْعَبُ طَوالَ اليَوْمِ.",
+ "خَرَجَتِ الفَأْرَةُ مِنْ مَكانِها ، ورَاحَتْ تَقْفِزُ وتَلْعَبُ مَسْرورَةً.",
+ "مَرَّتِ الفَأْرَةُ على الأَسَدِ وهُوَ نائِمٌ ، فَشاهَدَتْ فَرائِصَهُ واقِفَةً على وَجْهِ الأَسَدِ. قَفَزَتِ الفَأْرَةُ تُلاعِبُها ، فَطارَتِ الفَرائِصُ ، وصَحا الأَسَدُ غَضْبانَ ، وزَأَرَ زَئيراً مُخيفاً ، فَخافَتِ الفَأْرَةُ وارْتَعَشَتْ.",
+ "نَظَرَ الأَسَدُ إلى الفَأْرَةِ وصاحَ: كَيْفَ تَقْفِزينَ على وَجْهي وأَنا نائِمٌ؟ لابُدَّ مِنْ قَتْلِكِ.",
+ "بَكَتِ الفَأْرَةُ ، وقالَتْ: سامِحْني يا سَيِّدِيَ الأَسَدُ.",
+ "قالَ الأَسَدُ: لا .. لا أُسامِحُكِ .. سَأَقْتُلُكِ.",
+ "قالَتِ الفَأْرَةُ: اُتْرُكْني يا سَيِّدي ، فَقَدْ أَنْفَعُكَ في المُسْتَقْبَلِ.",
+ "ضَحِكَ الأَسَدُ ، ثُمَّ قالَ: كَيْفَ تَسْتَطيعُ فَأْرَةٌ صَغيرَةٌ مِثْلُكِ ، أَنْ تَنْفَعَ أَسَداً قَوِيّاً مِثْلي؟ لكِنّي سَأَعْفو عَنْكِ هذِهِ المَرَّةَ.",
+ "وفي أَحَدِ الأَيّامِ ، وَقَعَ الأَسَدُ في شَبَكَةِ صَيّادٍ ، وحاوَلَ أَنْ يَخْرُجَ مِنْها ولكِنَّهُ لَمْ يَقْدِرْ. زَأَرَ الأَسَدُ بِأَعْلى صَوْتِهِ ، ونادى: النَّجْدَةَ النَّجْدَةَ .. خَلِّصوني مِنْ شَبَكَةِ الصَّيّادِ.",
+ "سَمِعَ الفيلُ زَئيرَ الأَسَدِ ، فَذَهَبَ إِلَيْهِ ، وحاوَلَ أَنْ يَقْطَعَ الشَّبَكَةَ ، فَلَمْ يَقْدِرْ. ورَكَضَ الذِّئْبُ نَحْوَ الأَسَدِ ، وحاوَلَ أَنْ يُخَلِّصَهُ ، لكِنَّهُ لَمْ يَقْدِرْ.",
+ "سَمِعَتِ الفَأْرَةُ زَئيرَ الأَسَدِ ، فَرَكَضَتْ نَحْوَهُ ، ورَأَتْهُ في الشَّبَكَةِ فَقالَتْ لَهُ: لا تَخَفْ ، سَأُخَلِّصُكَ مِنْ هذِهِ الشَّبَكَةِ.",
+ "قَرَضَتِ الفَأْرَةُ حِبالَ الشَّبَكَةِ بِأَسْنانِها فَقَطَّعَتْها ، فَرِحَ الأَسَدُ وخَرَجَ مِنَ الشَّبَكَةِ ، ونَظَرَ إلى الفَأْرَةِ وقالَ لَها: شُكْراً لَكِ ، شُكْراً لَكِ. أَنْتِ خَلَّصْتِني مِنَ المَوْتِ."
+ ],
+ khat:"قَدْ يَفْعَلُ الصَّغيرُ ما لا يَفْعَلُهُ الكَبيرُ.",
+ w:[["النَّجْدَةُ","المُساعَدَةُ"],["زَأَرَ","صاحَ الأَسَدُ"],["قَرَضَتْ","قَطَعَتْ بِأَسْنانِها"]]}
+);
+LS.push(
+{id:"games",t:"أَلْعابٌ مُسَلِّيَةٌ",k:"lesson",p:[139,140,141],ill:139,
+ tx:[
+ "سَأَلَ المُعَلِّمُ تَلاميذَهُ في ساحَةِ المَدْرَسَةِ: ماذا نَلْعَبُ اليَوْمَ؟",
+ "قالَ طارِقٌ: أَنا أَعْرِفُ لُعْبَةً ، كُنّا نَلْعَبُها في بَغْدادَ ، إِنَّها لُعْبَةُ الكَراسي. فَرِحَ التَّلاميذُ وأَحْضَروا الكَراسِيَ ، وأَحْضَرَ طارِقٌ صَفّارَةً ونَفَخَ فيها.",
+ "رَكَضَ التَّلاميذُ وأَخَذَ كُلُّ واحِدٍ مِنْهُمْ كُرْسِيّاً ، وجَلَسَ عَلَيْهِ ، وبَقِيَ غَسّانُ بِلا كُرْسِيٍّ ، ضَحِكَ التَّلاميذُ ، وخَرَجَ غَسّانُ مِنَ اللُّعْبَةِ وأَخْرَجوا مَعَهُ كُرْسِيّاً واحِداً.",
+ "وبَعْدَ انْتِهاءِ اللُّعْبَةِ ، قالَ أُسامَةُ: أَنا أَعْرِفُ لُعْبَةً اسْمُها: (أَيْنَ أَنْتَ؟ أَنا هُنا). كُنّا نَلْعَبُها في البَصْرَةِ.",
+ "وقَفَ التَّلاميذُ على شَكْلِ دائِرَةٍ ، ووَقَفَ هِشامٌ ورِياضٌ في وَسَطِ الدّائِرَةِ ، وغَطّى المُعَلِّمُ عَيْنَيْ كُلِّ واحِدٍ مِنْهُما بِمِنْديلٍ.",
+ "ومَشى الاثْنانِ ، فَصاحَ هِشامٌ: أَيْنَ أَنْتَ يا رِياضُ؟ قالَ رِياضٌ: أَنا هُنا. فَحاوَلَ هِشامٌ أَنْ يُمْسِكَ بِهِ ، وهُوَ يَهْرُبُ مِنْهُ ، وأَخيراً أَمْسَكَ بِهِ ، فَصَفَّقَ التَّلاميذُ.",
+ "اِسْتَأْذَنَ ياسِرٌ مِنَ المُعَلِّمِ وقالَ: أَنا أَعْرِفُ لُعْبَةً يَلْعَبُها أَطْفالُ مَحَلَّتِنا في نينَوى ، اسْمُها لُعْبَةُ جَرِّ الحَبْلِ. أَحْضَرَ التَّلاميذُ حَبْلاً ، وصاروا فَريقَيْنِ ، فَأَمْسَكَ كُلُّ فَريقٍ بِطَرَفٍ مِنَ الحَبْلِ وتَسابَقوا.",
+ "اِسْتَأْذَنَ سالِمٌ مِنَ المُعَلِّمِ وقالَ: كُنّا نَلْعَبُ لُعْبَةً لَطيفَةً في الأَنْبارِ اسْمُها لُعْبَةُ الذِّئْبِ والخَروفِ. وقَفَ التَّلاميذُ على شَكْلِ دائِرَةٍ ، وأَمْسَكَ كُلُّ واحِدٍ بِيَدِ الآخَرِ لِيَعْمَلوا سِياجاً ، فَوَقَفَ عَدْنانُ في وَسَطِ الدّائِرَةِ يُمَثِّلُ الخَروفَ ، أَمّا سَعيدٌ فَكانَ يُمَثِّلُ الذِّئْبَ خارِجَ السِّياجِ لِيَهْجُمَ على فَريسَتِهِ. لكِنَّ التَّلاميذَ يَمْنَعونَهُ بِتَراصُفِهِمْ."
+ ],
+ khat:"زَرَعوا فَأَكَلْنا ونَزْرَعُ فَيَأْكُلونَ."},
+{id:"farewell",t:"أَيُّها الصَّفُّ وَداعاً",k:"poem",p:[142],ill:142,
+ tx:[
+ "أَيُّها الصَّفُّ وَداعاً ، لا تَقُلْ إِنّا ابْتَعَدْنا",
+ "مِنْ صِغارٍ أَوْفِياءَ ، سَوْفَ نَحْظى بِاللِّقاءِ",
+ "فيكَ كُنّا نَتَعَلَّمْ ، أَيُّها الصَّفُّ وَداعاً",
+ "فيكَ كُنّا نَتَكَلَّمْ ، إِنَّ حَرَّ الصَّيْفِ جاءَ",
+ "إِنَّنا مَهْما ابْتَعَدْنا ، أَيُّها الصَّفُّ وَداعاً",
+ "لَنْ يَغيبَ الدَّرْسُ عَنّا ، وانْتَظِرْ يَوْمَ اللِّقاءِ"
+ ]}
+);
+
+</script>
+<script>
+"use strict";
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const sh=a=>[...a].sort(()=>Math.random()-.5);
+const ld=(k,d)=>{try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const I={home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',book:'<path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/>',note:'<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',game:'<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 10v5M4.5 12.5h5"/><circle cx="16" cy="11.5" r="1"/><circle cx="18.5" cy="14" r="1"/>',mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',check:'<path d="M5 12.5l4.5 4.5L19 7"/>',star:'<path d="M12 3l2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.3l1.1-6.2L3 9.7l6.2-.9z"/>',vol:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/>',mut:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/>',pen:'<path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/>',redo:'<path d="M20 11a8 8 0 1 0-2 6"/><path d="M20 4v7h-7"/>',pages:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/>',eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',cl:'<path d="M15 5l-7 7 7 7"/>',cr:'<path d="M9 5l7 7-7 7"/>',skip:'<path d="M5 5l9 7-9 7zM19 5v14"/>',stop:'<rect x="6" y="6" width="12" height="12" rx="2"/>',play:'<path d="M7 4l13 8-13 8z"/>',brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V4a3 3 0 0 0-3 0zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 2"/>',bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',flame:'<path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/>'};
+const ic=(n,s=24,f='none')=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="${f}" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
+const AR=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+/* ===== بيانات ===== */
+LS.sort((a,b)=>a.p[0]-b.p[0]);
+const BY={};LS.forEach(l=>BY[l.id]=l);
+const KIND={lesson:"درس",expr:"تعبير",poem:"محفوظة"};
+const pg3=n=>String(n).padStart(3,"0");
+const MEMO=l=>l.k==="poem"||["quran","dua"].includes(l.id);
+/* ===== التقسيم والمطابقة ===== */
+const TSH=/[ؐ-ًؚ-ٰٟۖ-ۭـ]/g;
+const norm=w=>w.replace(TSH,"").replace(/[أإآٱ]/g,"ا").replace(/ة/g,"ه").replace(/ى/g,"ي").replace(/ؤ/g,"و").replace(/ئ/g,"ي").replace(/[^ء-ي]/g,"");
+const plain=w=>w.replace(TSH,"");
+function chunkLine(t){
+  t=t.replace(/\s+/g," ").trim();
+  const base=t.split(/(?<=[.؟!])\s+/).filter(Boolean),out=[];
+  base.forEach(s=>{
+    const n=s.split(" ").length;
+    if(n<=14){out.push(s);return}
+    const parts=s.split(/(?<=[،:])\s+/);let cur="";
+    parts.forEach(p=>{
+      if(cur&&(cur+" "+p).split(" ").length>14){out.push(cur);cur=p}else cur=cur?cur+" "+p:p;
+    });
+    if(cur)out.push(cur);
+  });
+  const m=[];out.forEach(s=>{if(m.length&&s.split(" ").length<4)m[m.length-1]+=" "+s;else m.push(s)});
+  return m;
+}
+const CH={};
+LS.forEach(l=>{CH[l.id]=l.k==="poem"?l.tx.slice():l.tx.flatMap(chunkLine)});
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,i)=>i);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+const sim=(a,b)=>{if(a===b)return 1;const m=Math.max(a.length,b.length);return m?1-lev(a,b)/m:0};
+const stp=x=>x.replace(/^(ال|و|ف|ب|ل)(?=.{3})/,"");
+const wsim=(a,b)=>Math.max(sim(a,b),sim(stp(a),stp(b)));
+const TH=w=>w.length<=2?1:w.length<=3?.67:.7;
+function align(E,S){
+  const n=E.length,m=S.length,D=[],B=[];
+  for(let i=0;i<=n;i++){D.push(new Float32Array(m+1));B.push(new Uint8Array(m+1))}
+  for(let i=1;i<=n;i++){D[i][0]=i;B[i][0]=1}
+  for(let j=1;j<=m;j++){D[0][j]=j;B[0][j]=2}
+  for(let i=1;i<=n;i++)for(let j=1;j<=m;j++){
+    const s=wsim(E[i-1],S[j-1]),c=s>=TH(E[i-1])?1-s:2.1;
+    let best=D[i-1][j-1]+c,b=0;
+    if(D[i-1][j]+1<best){best=D[i-1][j]+1;b=1}
+    if(D[i][j-1]+1<best){best=D[i][j-1]+1;b=2}
+    D[i][j]=best;B[i][j]=b;
+  }
+  const r=new Array(n).fill(-1);let i=n,j=m;
+  while(i>0||j>0){
+    const b=B[i][j];
+    if(i>0&&j>0&&b===0){if(wsim(E[i-1],S[j-1])>=TH(E[i-1]))r[i-1]=j-1;i--;j--}
+    else if(i>0&&(b===1||j===0))i--;else j--;
+  }
+  return r;
+}
+/* ===== الحالة ===== */
+const today=()=>new Date().toISOString().slice(0,10);
+let S=ld("q3",{stars:0,streak:0,last:"",day:"",n:0,L:{}});
+const LL=id=>S.L[id]||(S.L[id]={r:[],st:0,g:{},m:0,done:0});
+function touchDay(){const t=today();if(S.day!==t){const y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=S.last===y?S.streak+1:(S.last===t?S.streak:1);S.day=t;S.n=0}S.last=t}
+function addStars(k){const b=Math.floor(S.stars/30);S.stars+=k;sv("q3",S);hud();if(Math.floor(S.stars/30)>b){snd("lvl");confetti()}}
+const GOAL=5;
+/* ===== الصوت ===== */
+let AC=null,MG=null,NB=null,SON=ld("q3snd",true);
+function A(){if(!AC){try{AC=new(window.AudioContext||window.webkitAudioContext)();MG=AC.createGain();MG.gain.value=.6;const c=AC.createDynamicsCompressor();MG.connect(c);c.connect(AC.destination)}catch(e){return null}}if(AC.state==="suspended")AC.resume();return AC}
+function T(f,o={}){const c=SON&&A();if(!c)return;const t=c.currentTime+(o.t||0),d=o.d||.2,v=o.v||.22,g=c.createGain(),os=c.createOscillator();os.type=o.w||"sine";os.frequency.setValueAtTime(f,t);if(o.to)os.frequency.exponentialRampToValueAtTime(o.to,t+d);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+(o.a||.008));g.gain.exponentialRampToValueAtTime(.0001,t+d);os.connect(g);g.connect(MG);os.start(t);os.stop(t+d+.05)}
+function Nz(o={}){const c=SON&&A();if(!c)return;if(!NB){NB=c.createBuffer(1,c.sampleRate,c.sampleRate);const d=NB.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1}const t=c.currentTime+(o.t||0),d=o.d||.15,s=c.createBufferSource();s.buffer=NB;s.loop=true;const f=c.createBiquadFilter();f.type=o.ty||"bandpass";f.Q.value=o.q||1;f.frequency.setValueAtTime(o.f||2000,t);if(o.to)f.frequency.exponentialRampToValueAtTime(o.to,t+d);const g=c.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(o.v||.2,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d);s.connect(f);f.connect(g);g.connect(MG);s.start(t);s.stop(t+d+.05)}
+const BELL=(f,v=.2)=>[[1,1],[2.76,.5],[5.4,.25],[8.9,.12]].forEach(([r,a])=>T(f*r,{d:1.3/r+.3,v:v*a}));
+const PS=[523.25,587.33,659.25,783.99,880,1046.5];
+const SND={
+ nav0:()=>{T(523,{w:"triangle",d:.4});T(1046,{v:.06,d:.25})},nav1:()=>{T(659,{d:.4});T(988,{v:.1,t:.05,d:.3})},nav2:()=>{T(784,{w:"triangle",d:.35});T(1175,{v:.08,t:.04,d:.3})},nav3:()=>{T(880,{d:.4});T(1319,{v:.09,t:.06,d:.3})},
+ start:()=>{T(330,{to:880,d:.4,w:"sawtooth",v:.07});[523,659,784,1046].forEach((f,i)=>T(f,{t:.14+i*.08,d:.45,w:"triangle"}))},
+ open:()=>{T(440,{to:660,d:.25,w:"triangle"});T(880,{t:.1,d:.3,v:.1})},
+ g_ord:()=>{[220,330,440].forEach((f,i)=>{T(f,{t:i*.09,d:.09,w:"square",v:.1});T(f*2,{t:i*.09,d:.05,v:.1})})},
+ g_clz:()=>{T(380,{to:900,d:.18,v:.22});T(900,{to:1350,t:.14,d:.12,v:.12})},
+ g_bld:()=>{[0,.06,.12].forEach(t=>Nz({t,d:.05,f:3600,v:.22,q:2}));T(500,{t:.2,d:.18,w:"triangle",v:.12})},
+ g_spt:()=>BELL(880,.22),
+ g_mem:()=>[784,880,988,1175].forEach((f,i)=>{T(f,{t:i*.08,d:.3,v:.18});T(f*3,{t:i*.08,d:.08,v:.06})}),
+ g_wrt:()=>{Nz({d:.14,f:4200,q:3,v:.2});T(300,{t:.1,d:.12,w:"triangle",v:.15})},
+ g_mix:()=>[523,659,784,1046,1319].forEach((f,i)=>T(f,{t:i*.07,d:.6,w:"triangle",v:.17})),
+ line:i=>{const f=PS[i%6];T(f,{w:"triangle",d:.35,v:.2});T(f*4,{d:.06,v:.07})},
+ wok:i=>{const f=PS[i%6]*2;T(f,{d:.18,v:.1,w:"triangle"})},
+ right:()=>{[523,659,784].forEach((f,i)=>T(f,{t:i*.07,d:.3,w:"triangle",v:.2}));T(1568,{t:.22,d:.4,v:.08})},
+ wrong:()=>{T(240,{to:170,d:.28,w:"triangle",v:.22});T(180,{t:.12,to:130,d:.3,w:"triangle",v:.18})},
+ flip:()=>{Nz({d:.07,f:2600,to:5200,q:1.4,v:.22});T(700,{d:.05,v:.08})},
+ match:()=>[880,1175,1568].forEach((f,i)=>T(f,{t:i*.06,d:.35,v:.16})),
+ miss:()=>T(300,{to:200,d:.2,v:.16}),
+ star:()=>[0,.07,.14].forEach(t=>T(1200+Math.random()*1400,{t,d:.22,v:.1})),
+ done:()=>{[523,659,784,1046].forEach((f,i)=>T(f,{t:i*.11,d:.5,w:"triangle",v:.2}));[523,659,784].forEach(f=>T(f,{t:.5,d:.9,v:.14}));SND.star()},
+ back:()=>{T(660,{d:.1,v:.16});T(440,{t:.08,d:.16,v:.16})},
+ next:()=>{T(587,{d:.08,v:.16});T(880,{t:.07,d:.14,v:.16})},
+ ok:()=>{T(784,{d:.12,w:"triangle",v:.2});T(1175,{t:.09,d:.22,w:"triangle",v:.2})},
+ toggle:()=>{Nz({d:.05,f:3000,q:2,v:.2});T(1000,{d:.08,v:.1})},
+ chip:()=>{T(700,{d:.07,w:"square",v:.07});T(1050,{t:.05,d:.08,w:"square",v:.06})},
+ mic_on:()=>{T(500,{to:900,d:.2,w:"triangle",v:.2});T(1200,{t:.15,d:.15,v:.1})},
+ mic_off:()=>{T(900,{to:450,d:.22,w:"triangle",v:.18})},
+ pass:()=>{[523,659,784,1046,1319,1568].forEach((f,i)=>T(f,{t:i*.08,d:.55,w:"triangle",v:.2}));BELL(1046,.2);SND.star()},
+ fail:()=>{T(330,{d:.25,w:"sawtooth",v:.1});T(262,{t:.2,d:.4,w:"sawtooth",v:.1});T(196,{t:.45,d:.5,w:"sawtooth",v:.08})},
+ tick:()=>T(1400,{d:.04,w:"square",v:.05}),
+ reveal:()=>{Nz({d:.08,f:1800,to:4200,q:1.5,v:.14});T(900,{d:.1,v:.1})},
+ lvl:()=>[392,523,659,784,1046].forEach((f,i)=>T(f,{t:i*.09,d:.5,w:"triangle",v:.2})),
+ pen:s=>Nz({d:.07,f:2300+Math.random()*1800,q:2.5,v:Math.min(.16,.05+(s||1)*.012)}),
+ erase:()=>Nz({d:.3,f:2800,to:500,q:.8,v:.22})
+};
+const snd=(n,a)=>{try{SND[n]&&SND[n](a)}catch(e){}};
+document.addEventListener("pointerdown",e=>{A();const b=e.target.closest&&e.target.closest("[data-snd]");if(b&&b.dataset.snd)snd(b.dataset.snd)});
+document.addEventListener("click",e=>{if(e.detail===0){const b=e.target.closest&&e.target.closest("[data-snd]");if(b&&b.dataset.snd)snd(b.dataset.snd)}});
+/* ===== الإمكانيات (ميكروفون + صوت) ===== */
+let DICT=null,TTS=null,REC=null;
+(async()=>{
+  try{if(window.claude&&claude.use){
+    DICT=await claude.use("dictation");
+    if(DICT){
+      DICT.onPartial(({text})=>{if(REC&&REC.on){REC.part=text;recLive()}});
+      DICT.onFinal(({text})=>{if(REC&&REC.on){REC.fin+=" "+text;REC.part="";recLive()}});
+      DICT.onState(({state})=>{if(state==="idle"&&REC&&REC.on&&!REC.ending){recEnd()}});
+    }
+    TTS=await claude.use("tts");
+  }}catch(e){}
+  setTimeout(()=>{if(CUR&&CT==='read')drawRead()},0);
+})();
+async function speak(t){if(!TTS)return;try{await TTS.speak(t.replace(/ـ/g,"").replace(TSH,m=>m),{language:"ar"})}catch(e){}}
+/* ===== مساعدات ===== */
+function confetti(){const c=$("#cf"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;const cs=getComputedStyle(document.body).getPropertyValue("--c3").trim()||"#ffb938",cols=[cs,"#fff","#3ee6a8","#ff6b81","#7aa8ff"];const Q=Array.from({length:90},()=>({x:innerWidth/2,y:innerHeight*.45,vx:(Math.random()-.5)*14,vy:-Math.random()*14-4,r:4+Math.random()*5,c:cols[Math.random()*5|0],a:Math.random()*6,s:(Math.random()-.5)*.3}));let f=0;(function t(){x.clearRect(0,0,c.width,c.height);Q.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.35;p.a+=p.s;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.fillRect(-p.r,-p.r/2,p.r*2,p.r);x.restore()});if(++f<120)requestAnimationFrame(t);else x.clearRect(0,0,c.width,c.height)})()}
+function hud(){$("#sn").textContent=AR(S.stars);$("#lv").textContent=AR(Math.floor(S.stars/30)+1);$("#rg").style.setProperty("--p",(S.stars%30)/30*100+"%");$("#si").innerHTML=ic("star",18,"currentColor")}
+function sndBtn(){$("#snb").innerHTML=ic(SON?"vol":"mut",20)}
+$("#snb").onclick=()=>{SON=!SON;sv("q3snd",SON);sndBtn()};
+const tlHTML=(s,c)=>`<div class="tl ${c||""}" data-s="${s}"><i class="r"></i><i class="y"></i><i class="g"></i></div>`;
+const wordsOf=t=>t.split(" ").filter(Boolean);
+/* ===== التنقل ===== */
+const DK=[["home","الرئيسية","nav0"],["book","الدروس","nav1"],["note","المحفوظات","nav2"],["game","الألعاب","nav3"]];
+$("#dock").insertAdjacentHTML("beforeend",DK.map((d,i)=>`<button data-i="${i}" data-snd="${d[2]}" aria-label="${d[1]}">${ic(d[0],24)}<span>${d[1]}</span></button>`).join(""));
+let tab=0;
+function go(i){tab=i;$$(".view").forEach((v,j)=>v.classList.toggle("on",j===i));document.body.dataset.u=i;$$("#dock button").forEach((b,j)=>b.classList.toggle("on",j===i));const b=$$("#dock button")[i];$("#bub").style.setProperty("--bx",b.offsetLeft+"px");scrollTo(0,0);if(i===0)renderHome();if(i===1)renderLessons();if(i===2)renderPoems();if(i===3)renderPlay()}
+$$("#dock button").forEach(b=>b.onclick=()=>go(+b.dataset.i));
+addEventListener("resize",()=>{const b=$$("#dock button")[tab];$("#bub").style.setProperty("--bx",b.offsetLeft+"px")});
+/* ===== الرئيسية ===== */
+function lessonPct(id){const l=BY[id],s=LL(id);return Math.round(100*(s.r.length)/CH[id].length)}
+function isDone(id){return LL(id).r.length>=CH[id].length}
+function coverOf(l){return l.ill?`img/i/${pg3(l.ill)}.webp`:`img/p/${pg3(l.p[0])}.webp`}
+function renderHome(){
+  const done=LS.filter(l=>isDone(l.id)).length;
+  $("#sub0").textContent=`${AR(LS.length)} درساً ومحفوظة · أنجزت ${AR(done)}`;
+  const nxt=BY[S.lastId]&&!isDone(S.lastId)?BY[S.lastId]:LS.find(l=>!isDone(l.id))||LS[0];
+  const g=Math.min(GOAL,S.day===today()?S.n:0);
+  $("#home").innerHTML=`
+  <button class="glass cont" id="cont" data-snd="start"><img src="${coverOf(nxt)}" alt=""><span><p>${S.lastId?"أكمل من حيث توقفت":"ابدأ من هنا"}</p><h3>${nxt.title||nxt.t}</h3><p>صفحة ${AR(nxt.p[0])} · ${KIND[nxt.k]}</p></span></button>
+  <div class="glass goal"><div class="ring" style="--p:${g/GOAL*100}%"><b>${AR(g)}</b></div><div><h3>هدف اليوم</h3><p>اقرأ ${AR(GOAL)} مقاطع بصوتك بدون أخطاء${g>=GOAL?" — أنجزته! 🎉":""}</p></div></div>
+  <div class="stats"><div class="glass stat"><b>${AR(S.stars)}</b><span>نجمة</span></div><div class="glass stat"><b>${AR(S.streak||0)}</b><span>أيام متتالية</span></div><div class="glass stat"><b>${AR(done)}</b><span>دروس منجزة</span></div></div>
+  <div class="row"><button class="cta" id="rdn" data-snd="mic_on">${ic("mic",24)} اقرأ الآن</button></div>`;
+  $("#cont").onclick=()=>openL(nxt.id);$("#rdn").onclick=()=>openL(nxt.id,"read");
+}
+/* ===== قائمة الدروس ===== */
+let FIL="all";
+function cardHTML(l){const s=LL(l.id),done=isDone(l.id),pct=lessonPct(l.id),tot=Object.values(s.g).reduce((a,b)=>a+b,0)+s.st;
+ return `<button class="glass card" data-id="${l.id}" data-snd="open"><div class="im" style="background-image:url(${coverOf(l)})"></div><span class="tag${done?" done":""}">${done?"أنجزته ✓":KIND[l.k]}</span><div class="bd"><h3>${l.t}</h3><span class="pg">صفحة ${AR(l.p[0])}${pct&&!done?` · ${AR(pct)}٪`:""}</span>${tot?`<span class="st">${ic("star",15,"currentColor")} ${AR(tot)}</span>`:`<span class="st no">لم تبدأ</span>`}</div></button>`}
+function renderLessons(){
+  const F=[["all","الكل"],["lesson","دروس"],["expr","تعبير كتابي"],["todo","لم أُنجزها"]];
+  $("#chips").innerHTML=F.map(f=>`<button class="chip${FIL===f[0]?" on":""}" data-f="${f[0]}" data-snd="chip">${f[1]}</button>`).join("");
+  $$("#chips .chip").forEach(c=>c.onclick=()=>{FIL=c.dataset.f;renderLessons()});
+  const L=LS.filter(l=>l.k!=="poem").filter(l=>FIL==="all"||(FIL==="todo"?!isDone(l.id):l.k===FIL));
+  $("#g1").innerHTML=L.map(cardHTML).join("")||`<p class="lead">ما في شي هنا 🎉</p>`;
+  $$("#g1 .card").forEach(c=>c.onclick=()=>openL(c.dataset.id));
+  $("#openBook").innerHTML=ic("pages",20)+" تصفّح الكتاب كاملاً";
+}
+function renderPoems(){
+  const L=LS.filter(l=>l.k==="poem"||["quran","dua"].includes(l.id));
+  $("#g2").innerHTML=L.map(cardHTML).join("");
+  $$("#g2 .card").forEach(c=>c.onclick=()=>openL(c.dataset.id,"mem"));
+}
+/* ===== شاشة الدرس ===== */
+let CUR=null,CT="read",CI=0,RES={};
+const ov=$("#ov"),ob=$("#ob");
+function openL(id,t){
+  CUR=BY[id];CT=t||"read";S.lastId=id;touchDay();sv("q3",S);RES={};
+  const s=LL(id);CI=Math.max(0,CH[id].findIndex((_,i)=>!s.r.includes(i)));if(CI<0)CI=0;
+  ov.dataset.u=CUR.k==="poem"?2:CUR.k==="expr"?3:1;
+  document.body.dataset.u=ov.dataset.u;
+  $("#ot").textContent=CUR.t;
+  ov.classList.add("on");ov.setAttribute("aria-hidden","false");document.documentElement.style.overflow="hidden";
+  drawTabs();drawTab();
+}
+function closeL(){stopRecSafe();ov.classList.remove("on");ov.setAttribute("aria-hidden","true");document.documentElement.style.overflow="";document.body.dataset.u=tab;CUR=null;[renderHome,renderLessons,renderPoems,renderPlay][tab]();hud()}
+$("#ox").onclick=closeL;["#ox","#gx","#bx"].forEach(s=>$(s).innerHTML=ic("x",20));
+function drawTabs(){
+  const T=[["read","mic","اقرأ"],...(MEMO(CUR)?[["mem","brain","احفظ"]]:[]),["play","game","العب"],["write","pen","اكتب"],["pages","pages","الكتاب"]];
+  $("#otabs").innerHTML=T.map(t=>`<button data-t="${t[0]}" data-snd="chip" class="${CT===t[0]?"on":""}">${ic(t[1],20)}${t[2]}</button>`).join("");
+  $$("#otabs button").forEach(b=>b.onclick=()=>{stopRecSafe();CT=b.dataset.t;drawTabs();drawTab()});
+}
+function drawTab(){ob.scrollTop=0;({read:drawRead,mem:drawMem,play:drawPlay,write:()=>writeGame(CUR.id),pages:drawPages})[CT]();updBar()}
+function updBar(){$("#obar").style.width=lessonPct(CUR.id)+"%"}
+/* ===== مدرّب القراءة ===== */
+function chunkWords(txt){return wordsOf(txt).map(w=>({t:w,n:norm(w)}))}
+function drawRead(hidden){
+  if(!CUR||CT!=="read"&&!hidden)return;
+  const id=CUR.id,ch=CH[id],s=LL(id),cw=chunkWords(ch[CI]);
+  const parent=!DICT;
+  REC=null;
+  ob.innerHTML=`<img class="cover" src="${coverOf(CUR)}" alt="">
+  <div class="dots" id="dots">${ch.map((_,i)=>`<button class="dt ${s.r.includes(i)?"ok":""} ${i===CI?"cur":""}" data-i="${i}" data-snd="tick" aria-label="مقطع ${i+1}"></button>`).join("")}</div>
+  <div class="glass stage">${tlHTML("idle","h")}<div class="tx" id="stg">${cw.map((w,i)=>w.n?`<span class="w ${parent?"tg":""}${hidden?" mask":""}" data-i="${i}">${w.t}</span>`:`<span> ${w.t} </span>`).join(" ")}</div></div>
+  <div class="live" id="live">${parent?"اقرأ بصوت عالٍ، وأهله يضغطون على الكلمة الخطأ لتصير حمراء":"اضغط الميكروفون واقرأ المقطع بصوت عالٍ"}</div>
+  <div class="ctl"><button class="sm" id="prv" data-snd="back" aria-label="السابق">${ic("cr",24)}</button>${parent?`<button class="mic" id="mic" data-snd="ok" aria-label="تم">${ic("check",40)}</button>`:`<button class="mic" id="mic" data-snd="mic_on" aria-label="ابدأ القراءة">${ic("mic",40)}</button>`}<button class="sm" id="lis" data-snd="ok" aria-label="استمع" ${TTS?"":"disabled"}>${ic("vol",24)}</button><button class="sm" id="nxt" data-snd="next" aria-label="التالي">${ic("cl",24)}</button></div>
+  <div class="row"><button class="ghost" id="skp" data-snd="next">${ic("skip",18)} تخطَّ المقطع</button>${CUR.tx.length&&!hidden&&MEMO(CUR)?"":""}</div>
+  ${CUR.khat?`<div class="glass khat"><small>الخط</small><div class="tx">${CUR.khat}</div></div>`:""}`;
+  $$("#dots .dt").forEach(d=>d.onclick=()=>{stopRecSafe();CI=+d.dataset.i;drawRead(hidden)});
+  $("#nxt").onclick=()=>{if(CI<ch.length-1){stopRecSafe();CI++;drawRead(hidden)}};
+  $("#prv").onclick=()=>{if(CI>0){stopRecSafe();CI--;drawRead(hidden)}};
+  $("#skp").onclick=()=>{stopRecSafe();if(CI<ch.length-1){CI++;drawRead(hidden)}else showFinal(hidden)};
+  $("#lis").onclick=()=>speak(ch[CI]);
+  REC={cw,hidden,on:false,fin:"",part:"",tries:RES[CI]||0,parent,ok:new Set(),done:false};
+  if(parent){
+    $$("#stg .w").forEach(w=>w.onclick=()=>{w.classList.toggle("bad");snd(w.classList.contains("bad")?"miss":"tick")});
+    $("#mic").onclick=parentDone;
+  }else $("#mic").onclick=toggleRec;
+  if(hidden)REC.hidden=true;
+}
+function setTL(s){const t=$(".stage .tl");if(t)t.dataset.s=s}
+function setLive(t,c){const l=$("#live");if(l){l.textContent=t;l.className="live "+(c||"")}}
+function toggleRec(){
+  if(!REC)return;
+  if(REC.on){stopRec();return}
+  REC.on=true;REC.ending=false;REC.fin="";REC.part="";REC.ok=new Set();REC.done=false;
+  $$("#stg .w").forEach(w=>w.className="w pend"+(REC.hidden?" mask":""));
+  $("#mic").classList.add("rec");$("#mic").innerHTML=ic("stop",38);setTL("y");setLive("أسمعك… اقرأ المقطع كاملاً");
+  try{
+    const p=DICT.start();
+    if(p&&p.catch)p.catch(e=>{
+      const c=e&&e.code;REC.on=false;$("#mic")&&$("#mic").classList.remove("rec");
+      if(c==="not_granted"){DICT=null;drawRead(REC&&REC.hidden)}else{setTL("idle");setLive("ما قدرت أسمعك، جرّب مرة ثانية");$("#mic")&&($("#mic").innerHTML=ic("mic",40))}
+    });
+  }catch(e){REC.on=false}
+}
+function currentAlign(){
+  const E=REC.cw.filter(w=>w.n).map(w=>w.n),idx=[];REC.cw.forEach((w,i)=>{if(w.n)idx.push(i)});
+  const sp=((REC.fin||"")+" "+(REC.part||"")).split(/\s+/).map(norm).filter(Boolean);
+  return {E,idx,r:align(E,sp),sp};
+}
+function recLive(){
+  if(!REC||!REC.on)return;
+  const {E,idx,r}=currentAlign();let last=-1;r.forEach((m,i)=>{if(m>=0)last=i});
+  const spans=$$("#stg .w");
+  r.forEach((m,i)=>{
+    const el=spans[i];if(!el)return;
+    if(m>=0){if(!el.classList.contains("ok")){el.className="w ok"+(REC.hidden?" mask":"");snd("wok",REC.ok.size);REC.ok.add(i)}}
+    else if(i<last){if(!el.classList.contains("bad")){el.className="w bad"+(REC.hidden?" mask":"");snd("miss")}}
+    else el.className="w pend"+(REC.hidden?" mask":"");
+  });
+  if(r.every(m=>m>=0))recEnd();
+}
+async function stopRec(){if(!REC||!REC.on)return;REC.ending=true;try{await DICT.stop()}catch(e){}recEnd()}
+function stopRecSafe(){try{if(REC&&REC.on){REC.on=false;REC.ending=true;DICT&&DICT.stop&&DICT.stop().catch(()=>{})}}catch(e){}}
+function recEnd(){
+  if(!REC||REC.done)return;REC.done=true;REC.on=false;
+  try{if(DICT&&!REC.ending){REC.ending=true;DICT.stop().catch(()=>{})}}catch(e){}
+  const {E,idx,r}=currentAlign(),spans=$$("#stg .w");
+  r.forEach((m,i)=>{const el=spans[i];if(el)el.className="w "+(m>=0?"ok":"bad")+(REC.hidden?" mask":"")});
+  $("#mic")&&($("#mic").classList.remove("rec"),$("#mic").innerHTML=ic("mic",40));
+  finishChunk(r.filter(m=>m>=0).length,E.length,E.length===0);
+}
+function parentDone(){
+  if(!REC)return;const sp=$$("#stg .w");let bad=sp.filter(w=>w.classList.contains("bad")).length;
+  sp.forEach(w=>{if(!w.classList.contains("bad"))w.classList.add("ok")});
+  finishChunk(sp.length-bad,sp.length,false);
+}
+function finishChunk(ok,n,empty){
+  const need=n-(n<=8?0:1),pass=empty||ok>=need,id=CUR.id,s=LL(id);
+  RES[CI]=(RES[CI]||0)+1;
+  const dot=$$("#dots .dt")[CI];
+  if(pass){
+    setTL("g");snd("pass");setLive(RES[CI]===1?"ممتاز! قراءة صحيحة 🌟":"أحسنت! هذي المرة صح","ok");
+    dot.className="dt ok cur";
+    if(!s.r.includes(CI)){s.r.push(CI);const k=RES[CI]===1?2:1;s.st+=k;addStars(k);touchDay();S.n++;sv("q3",S)}
+    updBar();
+    setTimeout(()=>{if(!CUR)return;if(s.r.length>=CH[id].length&&!s.done){s.done=1;sv("q3",S);addStars(5);showFinal(REC&&REC.hidden)}else if(CI<CH[id].length-1){CI++;drawRead(REC&&REC.hidden)}else showFinal(REC&&REC.hidden)},1300);
+  }else{
+    setTL("r");snd("fail");dot.className="dt bad cur";
+    const bads=$$("#stg .w.bad").map(w=>w.textContent);
+    setLive(`فيه كلمات تحتاج إعادة (${AR(ok)}/${AR(n)}) — اضغط الميكروفون وحاول مرة ثانية`,"no");
+    $("#mic").innerHTML=ic("redo",38);
+    const w=$$("#stg .w.bad");if(w.length)w[0].scrollIntoView({block:"center",behavior:"smooth"});
+    REC.bads=bads;
+  }
+}
+function showFinal(hidden){
+  const id=CUR.id,s=LL(id),all=s.r.length>=CH[id].length;
+  if(all){snd("done");confetti()}
+  ob.innerHTML=`<div class="res">${tlHTML(all?"g":"y")}<h2>${all?"أنهيت الدرس!":"وصلت للنهاية"}</h2><p>${all?"كل المقاطع صحيحة 🌟":`أنجزت ${AR(s.r.length)} من ${AR(CH[id].length)} مقطع`}</p>
+  <div class="row"><button class="big" id="again" data-snd="start">${ic("redo",20)} ${all?"اقرأ مرة ثانية":"أكمل المقاطع الباقية"}</button><button class="ghost" id="togm" data-snd="open">${ic("game",20)} العب</button></div></div>`;
+  $("#again").onclick=()=>{if(all)s.r=[],RES={};CI=Math.max(0,CH[id].findIndex((_,i)=>!s.r.includes(i)));drawRead(hidden)};
+  $("#togm").onclick=()=>{CT="play";drawTabs();drawTab()};
+  updBar();
+}
+/* ===== الحفظ ===== */
+let MLV=0;
+function drawMem(){
+  const id=CUR.id,lines=CUR.tx;
+  const hide=(li,wi)=>{const h=((li*7+wi*13+5)*2654435761>>>0)%100;return h<[0,25,50,75,101][MLV]};
+  ob.innerHTML=`<img class="cover" src="${coverOf(CUR)}" alt="">
+  <p class="hint" style="text-align:center">أخفِ الكلمات شيئاً فشيئاً</p>
+  <div class="lv">${[0,1,2,3,4].map(i=>`<button class="${MLV===i?"on":""}" data-l="${i}" data-snd="chip">${AR(i)}</button>`).join("")}</div>
+  <div class="glass rd" id="rdv">${lines.map((t,li)=>`<p class="tx">${wordsOf(t).map((w,wi)=>norm(w)&&hide(li,wi)?`<span class="w hid" data-snd="reveal">${w}</span>`:`<span class="w">${w}</span>`).join(" ")}</p>`).join("")}</div>
+  <div class="row"><button class="big" id="rcl" data-snd="mic_on">${ic("mic",20)} سمّعها من ذاكرتي</button></div>
+  <p class="live">اضغط على الكلمة المخبّأة لتظهر. ${LL(id).m?"✓ سبق وسمّعتها كاملة":""}</p>`;
+  $$(".lv button").forEach(b=>b.onclick=()=>{MLV=+b.dataset.l;drawMem()});
+  $$(".w.hid").forEach(w=>w.onclick=()=>{w.classList.remove("hid");w.style.color="";w.style.background="";w.style.border="";snd("reveal")});
+  $("#rcl").onclick=()=>{CT="read";CI=0;drawTabs();RES={};const s=LL(id);s.r=[];s.done=0;drawRead(true);const l=$("#live");l&&(l.dataset.rc=1);window.__recite=id};
+}
+/* ===== الصفحات ===== */
+function drawPages(){ob.innerHTML=`<p class="hint">صفحات الكتاب لهذا الدرس</p>`+CUR.p.map(n=>`<img class="pgimg" loading="lazy" src="img/p/${pg3(n)}.webp" alt="صفحة ${n}">`).join("")+`<div class="row"><button class="ghost" id="ob2" data-snd="flip">${ic("pages",20)} افتح في الكتاب</button></div>`;$("#ob2").onclick=()=>openBook(CUR.p[0])}
+/* ===== الكتاب ===== */
+let BP=1;const bk=$("#bk");
+function openBook(n){BP=n||1;bk.classList.add("on");bk.setAttribute("aria-hidden","false");drawBook()}
+function drawBook(){BP=Math.max(1,Math.min(144,BP));$("#bim").src=`img/p/${pg3(BP)}.webp`;$("#bpg").textContent="صفحة "+AR(BP)+" / "+AR(144);const l=LS.find(l=>l.p.includes(BP));$("#bt").textContent=l?l.t:"الكتاب"}
+$("#bn2").innerHTML=ic("cl",26);$("#bp2").innerHTML=ic("cr",26);
+$("#bn2").onclick=()=>{BP++;drawBook()};$("#bp2").onclick=()=>{BP--;drawBook()};
+$("#bx").onclick=()=>{bk.classList.remove("on");bk.setAttribute("aria-hidden","true")};
+$("#openBook").onclick=()=>openBook(1);
+{let x0=null;const f=$("#bk .fr");f.addEventListener("touchstart",e=>x0=e.touches[0].clientX,{passive:true});f.addEventListener("touchend",e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50){BP+=dx<0?1:-1;snd("flip");drawBook()}x0=null})}
+/* ===== الألعاب ===== */
+const gm=$("#gm"),gb=$("#gb"),fbEl=$("#fb"),gbar=$("#gbar");let nextFn=null,GCTX=null;
+function openG(fn,u){gm.dataset.u=u||3;gm.classList.add("on");gm.setAttribute("aria-hidden","false");fn()}
+function shut(){gm.classList.remove("on");gm.setAttribute("aria-hidden","true");fbEl.className="fb";if(CUR&&CT==="play")drawTab();if(!CUR){[renderHome,renderLessons,renderPoems,renderPlay][tab]()}hud()}
+$("#gx").onclick=shut;
+function scr(h,p=0){fbEl.className="fb";gb.innerHTML=h;gb.scrollTop=0;gbar.style.width=p+"%"}
+const prog=p=>gbar.style.width=Math.min(100,p)+"%";
+function fb(txt,next){nextFn=next;fbEl.className="fb on ok";fbEl.innerHTML=`<div><b>أحسنت!</b><p>${txt}</p></div><button data-snd="next" id="fbn">متابعة</button>`;$("#fbn").onclick=()=>{fbEl.className="fb";nextFn()}}
+function finishG(key,k){snd("done");confetti();const id=GCTX&&GCTX.id;if(id){const s=LL(id);s.g[key]=Math.max(s.g[key]||0,k)}addStars(k);touchDay();sv("q3",S);
+  scr(`<div class="res">${tlHTML("g")}<h2>${k>=3?"ممتاز!":k===2?"رائع!":"أحسنت!"}</h2><p>${"⭐".repeat(k)} +${AR(k)}</p><div class="row"><button class="big" id="ag" data-snd="start">${ic("redo",20)} مرة ثانية</button><button class="ghost" id="cl" data-snd="back">إغلاق</button></div></div>`,100);
+  $("#ag").onclick=()=>GAMES[key].run(GCTX);$("#cl").onclick=shut}
+/* مجمع الجمل */
+const okChunk=t=>{const n=wordsOf(t).filter(w=>norm(w)).length;return n>=4&&n<=14};
+function poolFor(ctx){
+  if(ctx.id)return CH[ctx.id].filter(okChunk).map(t=>({t,id:ctx.id}));
+  const a=[];sh(LS).slice(0,14).forEach(l=>{const c=CH[l.id].filter(okChunk);if(c.length)a.push({t:sh(c)[0],id:l.id})});return a;
+}
+function wordPool(ctx){const ids=ctx.id?[ctx.id]:LS.map(l=>l.id);const s=new Set();ids.forEach(i=>CH[i].forEach(t=>wordsOf(t).forEach(w=>{if(norm(w).length>=3)s.add(w.replace(/[،.؟!:()«»"]/g,""))})));return [...s]}
+function strip(w){return w.replace(/[،.؟!:()«»"]/g,"")}
+/* 1. أكمل الكلمة */
+function runCloze(ctx){
+  GCTX=ctx;const P=sh(poolFor(ctx)).slice(0,6),WP=wordPool(ctx);if(!P.length)return scr('<p class="hint">ما في جمل كافية</p>');
+  let i=0,first=0;
+  const go=()=>{
+    if(i===P.length)return finishG("clz",first>=5?3:first>=3?2:1);
+    const ws=wordsOf(P[i].t),cand=ws.map((w,j)=>[w,j]).filter(([w])=>norm(w).length>=3);
+    const [ans,j]=cand[Math.random()*cand.length|0],ap=strip(ans);
+    const d=sh(WP.filter(w=>norm(w)!==norm(ap))).slice(0,2),opts=sh([ap,...d]);let tried=false;
+    scr(`<p class="hint">اختر الكلمة الناقصة</p><div class="q">${ws.map((w,k)=>k===j?`<span class="blank" id="bl">&nbsp;&nbsp;&nbsp;&nbsp;</span>`:w).join(" ")}</div><div class="chs">${opts.map(o=>`<button class="ch">${o}</button>`).join("")}</div>`,i/P.length*100);
+    $$(".ch").forEach(b=>b.onclick=()=>{
+      if(norm(b.textContent)===norm(ap)){b.classList.add("ok");$("#bl").textContent=ap;$("#bl").classList.add("ok");snd("right");if(!tried)first++;i++;fb("إجابة صحيحة",go)}
+      else{b.classList.add("no");snd("wrong");tried=true}});
+  };go();
+}
+/* 2. ركّب الجملة */
+function runBuild(ctx){
+  GCTX=ctx;const P=sh(poolFor(ctx).filter(p=>wordsOf(p.t).length<=9)).slice(0,5);if(!P.length)return runCloze(ctx);let i=0,first=0;
+  const go=()=>{
+    if(i===P.length)return finishG("bld",first>=4?3:first>=2?2:1);
+    const ws=wordsOf(P[i].t);let n=0,err=false;
+    scr(`<p class="hint">رتّب الكلمات لتكوّن الجملة</p><div class="slot" id="sl"></div><div class="chs">${sh(ws.map((w,k)=>({w,k}))).map(o=>`<button class="ch" data-k="${o.k}">${o.w}</button>`).join("")}</div>`,i/P.length*100);
+    $$(".ch").forEach(b=>b.onclick=()=>{
+      if(b.classList.contains("ok"))return;
+      if(norm(ws[n])===norm(b.textContent)||b.textContent===ws[n]){b.classList.add("ok");snd("line",n);const sl=$("#sl");sl.innerHTML+=`<span class="w" style="font:700 26px/2 Amiri,serif;color:var(--okc)">${ws[n]}</span> `;n++;if(n===ws.length){if(!err)first++;i++;snd("right");fb("جملة صحيحة",go)}}
+      else{b.classList.add("no");snd("wrong");err=true;setTimeout(()=>b.classList.remove("no"),400)}});
+  };go();
+}
+/* 3. رتّب الجمل */
+function runOrder(ctx){
+  GCTX=ctx;let src=ctx.id?CH[ctx.id]:LS.flatMap(l=>CH[l.id].slice(0,3));
+  let base=ctx.id?src:sh(LS).map(l=>CH[l.id]).find(c=>c.length>=4)||src;
+  if(base.length<3)return runCloze(ctx);
+  const st=Math.random()*Math.max(1,base.length-4)|0,sel=base.slice(st,st+Math.min(5,base.length));
+  const items=sel.map((t,i)=>({t,i}));let n=0,err=0;
+  scr(`<p class="hint">اضغط الجمل بالترتيب الصحيح</p><div class="slot" id="sl"></div><div id="ch">${sh(items).map(o=>`<button class="ch" style="display:block;width:100%;font-size:21px;line-height:2" data-i="${o.i}">${o.t}</button>`).join("")}</div>`,0);
+  $$("#ch .ch").forEach(b=>b.onclick=()=>{
+    if(b.classList.contains("ok"))return;
+    if(+b.dataset.i===n){b.classList.add("ok");b.style.opacity=.35;snd("line",n);$("#sl").innerHTML+=`<p>${b.textContent}</p>`;n++;prog(n/sel.length*100);if(n===sel.length)setTimeout(()=>finishG("ord",err<=1?3:err<=3?2:1),500)}
+    else{b.classList.add("no");snd("wrong");err++;setTimeout(()=>b.classList.remove("no"),400)}});
+}
+/* 4. اكتشف الخطأ */
+function runSpot(ctx){
+  GCTX=ctx;const P=sh(poolFor(ctx)).slice(0,6),WP=wordPool(ctx);if(!P.length)return runCloze(ctx);let i=0,first=0;
+  const go=()=>{
+    if(i===P.length)return finishG("spt",first>=5?3:first>=3?2:1);
+    const ws=wordsOf(P[i].t),cand=ws.map((w,j)=>j).filter(j=>norm(ws[j]).length>=3),j=cand[Math.random()*cand.length|0];
+    const rep=sh(WP.filter(w=>norm(w)!==norm(ws[j])&&Math.abs(norm(w).length-norm(ws[j]).length)<=2))[0]||"ولد";let tried=false;
+    const sw=ws.slice();sw[j]=rep;
+    scr(`<p class="hint">فيه كلمة غلط في الجملة، اضغط عليها</p><div class="q">${sw.map((w,k)=>`<span class="w tg" data-k="${k}" style="cursor:pointer">${w}</span>`).join(" ")}</div>`,i/P.length*100);
+    $$(".q .w").forEach(w=>w.onclick=()=>{
+      if(+w.dataset.k===j){w.className="w ok tg";w.textContent=ws[j];snd("right");if(!tried)first++;i++;fb("لقطتها!",go)}
+      else{w.className="w bad tg";snd("wrong");tried=true;setTimeout(()=>{if(+w.dataset.k!==j)w.className="w tg"},500)}});
+  };go();
+}
+/* 5. ذاكرة الكلمات */
+function runMem(ctx){
+  GCTX=ctx;let pairs=[];
+  const l=ctx.id?BY[ctx.id]:null;
+  if(l&&l.w)l.w.forEach(p=>pairs.push([p[0],p[1],1]));
+  const wp=sh(ctx.id?CH[ctx.id].flatMap(wordsOf):LS.flatMap(x=>CH[x.id].slice(0,2).flatMap(wordsOf))).map(strip).filter(w=>norm(w).length>=3&&/[ً-ٟ]/.test(w));
+  const seen=new Set(pairs.map(p=>norm(p[0])));
+  for(const w of wp){if(pairs.length>=6)break;if(!seen.has(norm(w))){seen.add(norm(w));pairs.push([w,plain(w),0])}}
+  pairs=pairs.slice(0,6);if(pairs.length<3)return runCloze(ctx);
+  const d=sh(pairs.flatMap((p,i)=>[{i,t:p[0]},{i,t:p[1],s:p[2]}]));let sel=[],m=0,lock=false,miss=0;
+  scr(`<p class="hint">اقلب بطاقتين متطابقتين${pairs[0][2]?" (الكلمة ومعناها)":" (الكلمة مع نفسها بدون تشكيل)"}</p><div class="mem" id="mm">${d.map((c,k)=>`<button class="mc" data-k="${k}"><span class="in"><span class="f">${ic("star",26)}</span><span class="bk${c.s||c.t.length>9?" s":""}">${c.t}</span></span></button>`).join("")}</div>`,0);
+  $$(".mc").forEach(c=>c.onclick=()=>{
+    if(lock||c.classList.contains("up")||c.classList.contains("dn"))return;
+    c.classList.add("up");snd("flip");sel.push(c);
+    if(sel.length===2){
+      lock=true;const[a,b]=sel;
+      if(d[+a.dataset.k].i===d[+b.dataset.k].i){setTimeout(()=>{a.className=b.className="mc dn";snd("match");sel=[];lock=false;m++;prog(m/pairs.length*100);if(m===pairs.length)setTimeout(()=>finishG("mem",miss<=3?3:miss<=6?2:1),500)},400)}
+      else{miss++;setTimeout(()=>{a.classList.remove("up");b.classList.remove("up");snd("miss");sel=[];lock=false},800)}}});
+}
+/* 6. اكتب بإصبعك */
+function writeGame(id,ctx){
+  GCTX=ctx||{id};const l=id?BY[id]:null;
+  let ws=[];
+  if(l&&l.khat)ws=wordsOf(l.khat).map(strip).filter(w=>norm(w).length>=2);
+  if(l&&ws.length<3)ws=ws.concat(CH[id].flatMap(wordsOf).map(strip).filter(w=>norm(w).length>=3));
+  if(!l)ws=sh(LS.flatMap(x=>x.khat?wordsOf(x.khat):[])).map(strip).filter(w=>norm(w).length>=3);
+  ws=[...new Set(ws)].slice(0,5);if(!ws.length)return;
+  const inGm=!!ctx;const host=inGm?gb:ob;
+  let i=0;
+  const go=()=>{
+    if(i===ws.length){if(inGm)return finishG("wrt",3);addStars(3);const s=LL(id);s.g.wrt=3;sv("q3",S);snd("done");confetti();host.innerHTML=`<div class="res">${tlHTML("g")}<h2>كتبت بإتقان!</h2><p>⭐⭐⭐</p><div class="row"><button class="big" id="wa" data-snd="start">${ic("redo",20)} مرة ثانية</button></div></div>`;$("#wa").onclick=()=>writeGame(id);return}
+    const w=ws[i];
+    host.innerHTML=`<p class="hint" style="text-align:center">تتبّع الكلمة بإصبعك (${AR(i+1)}/${AR(ws.length)})</p><div class="pad" id="pd"><canvas id="mk" style="opacity:.22"></canvas><canvas id="cv"></canvas></div><div class="live" id="wl">ارسم فوق الكلمة بالضبط</div><div class="row"><button class="ghost" id="er" data-snd="erase">${ic("redo",20)} امسح</button><button class="big ok" id="dn" data-snd="ok">${ic("check",20)} انتهيت</button></div>`;
+    if(inGm)prog(i/ws.length*100);
+    const pd=$("#pd"),cv=$("#cv"),mk=$("#mk"),r=window.devicePixelRatio||1,W=pd.clientWidth,H=pd.clientHeight;
+    [cv,mk].forEach(c=>{c.width=W*r;c.height=H*r});
+    const cx=cv.getContext("2d"),mx=mk.getContext("2d");cx.scale(r,r);mx.scale(r,r);
+    let fs=Math.min(130,H*.62);const draw=(ctx2,mode)=>{ctx2.save();ctx2.direction="rtl";ctx2.textAlign="center";ctx2.textBaseline="middle";ctx2.font=`700 ${fs}px Amiri,serif`;while(ctx2.measureText(w).width>W*.9&&fs>34){fs-=4;ctx2.font=`700 ${fs}px Amiri,serif`}if(mode==="s"){ctx2.lineWidth=34;ctx2.lineJoin="round";ctx2.strokeText(w,W/2,H/2)}ctx2.fillStyle="#fff";ctx2.fillText(w,W/2,H/2);ctx2.restore()};
+    (document.fonts&&document.fonts.load?document.fonts.load("700 80px Amiri",w):Promise.resolve()).then(()=>{mx.clearRect(0,0,W,H);draw(mx)});
+    cx.lineCap="round";cx.lineJoin="round";cx.lineWidth=16;cx.strokeStyle=getComputedStyle(document.body).getPropertyValue("--c3").trim()||"#ffb938";
+    let dr=false,lx=0,ly=0,len=0;
+    const pt=e=>{const b=cv.getBoundingClientRect();return[e.clientX-b.left,e.clientY-b.top]};
+    cv.onpointerdown=e=>{dr=true;[lx,ly]=pt(e);cv.setPointerCapture(e.pointerId);cx.beginPath();cx.moveTo(lx,ly);cx.lineTo(lx+.1,ly);cx.stroke()};
+    cv.onpointermove=e=>{if(!dr)return;const[x,y]=pt(e);cx.beginPath();cx.moveTo(lx,ly);cx.lineTo(x,y);cx.stroke();const d=Math.hypot(x-lx,y-ly);len+=d;lx=x;ly=y;if(len>28){len=0;snd("pen",d)}};
+    cv.onpointerup=cv.onpointercancel=()=>dr=false;
+    $("#er").onclick=()=>cx.clearRect(0,0,W,H);
+    $("#dn").onclick=()=>{
+      const wl=$("#wl"),M=document.createElement("canvas");M.width=W*r;M.height=H*r;const m2=M.getContext("2d");m2.scale(r,r);draw(m2);
+      const D=document.createElement("canvas");D.width=W*r;D.height=H*r;const d2=D.getContext("2d");d2.scale(r,r);draw(d2,"s");
+      const a=m2.getImageData(0,0,M.width,M.height).data,b=cx.getImageData(0,0,cv.width,cv.height).data,dd=d2.getImageData(0,0,D.width,D.height).data;
+      let tot=0,cov=0,ink=0,out=0;
+      for(let p=3;p<a.length;p+=16){const mk1=a[p]>100,dk=dd[p]>100,ik=b[p]>100;if(mk1){tot++;if(ik)cov++}if(ik){ink++;if(!dk)out++}}
+      const c=tot?cov/tot:0,o=ink?out/ink:1;
+      if(ink<20){setTL2("حاول ترسم فوق الكلمة أولاً","no");return}
+      if(c>=.55&&o<.4){wl.className="live ok";wl.textContent="كتابة جميلة!";snd("right");i++;if(inGm)prog(i/ws.length*100);setTimeout(go,900)}
+      else{wl.className="live no";wl.textContent=c<.55?"ما غطّيت كل الكلمة، كمّل الرسم":"طلعت عن الخط شوية، امسح وحاول بهدوء";snd("wrong")}
+    };
+    function setTL2(t,c){const wl=$("#wl");wl.textContent=t;wl.className="live "+(c||"")}
+  };go();
+}
+const GAMES={
+ clz:{t:"أكمل الكلمة",d:"اختر الكلمة الناقصة",ic:"pen",run:runCloze,s:"g_clz"},
+ bld:{t:"ركّب الجملة",d:"رتّب كلمات الجملة",ic:"bolt",run:runBuild,s:"g_bld"},
+ ord:{t:"رتّب الجمل",d:"أعد ترتيب القصة",ic:"pages",run:runOrder,s:"g_ord"},
+ spt:{t:"اكتشف الخطأ",d:"أي كلمة غلط؟",ic:"eye",run:runSpot,s:"g_spt"},
+ mem:{t:"ذاكرة الكلمات",d:"طابق البطاقات",ic:"star",run:runMem,s:"g_mem"},
+ wrt:{t:"اكتب بإصبعك",d:"تتبّع الحروف",ic:"pen",run:ctx=>writeGame(ctx.id,ctx),s:"g_wrt"}
+};
+function drawPlay(){
+  ob.innerHTML=`<p class="hint">ألعاب هذا الدرس</p>`+Object.entries(GAMES).map(([k,g])=>{const st=LL(CUR.id).g[k]||0;return `<button class="glass big-card" data-k="${k}" data-snd="${g.s}"><span class="ico">${ic(g.ic,26)}</span><span><h3>${g.t}</h3><p>${g.d}${st?` · ${"⭐".repeat(st)}`:""}</p></span></button>`}).join("");
+  $$("#ob .big-card").forEach(c=>c.onclick=()=>openG(()=>GAMES[c.dataset.k].run({id:CUR.id}),ov.dataset.u));
+}
+function renderPlay(){
+  const mixes=["clz","spt","bld","ord","mem","wrt"];
+  $("#g3").innerHTML=mixes.map(k=>{const g=GAMES[k];return `<button class="glass big-card" data-k="${k}" data-snd="${g.s}"><span class="ico">${ic(g.ic,26)}</span><span><h3>${g.t} <small style="font-weight:500;color:var(--mut)">· مختلط</small></h3><p>${g.d} من كل دروس الكتاب</p></span></button>`}).join("");
+  $$("#g3 .big-card").forEach(c=>c.onclick=()=>openG(()=>GAMES[c.dataset.k].run({}),3));
+}
+/* ===== تشغيل ===== */
+touchDay();sv("q3",S);hud();sndBtn();go(0);
+window.__app={LS,CH,S,align,norm,chunkLine,openL};
+</script>
