@@ -1112,7 +1112,7 @@ addEventListener("resize",()=>{const b=$$("#dock button")[tab];$("#bub").style.s
 /* ===== الرئيسية ===== */
 function lessonPct(id){const l=BY[id],s=LL(id);return Math.round(100*(s.r.length)/CH[id].length)}
 function isDone(id){return LL(id).r.length>=CH[id].length}
-function coverOf(l){return l.ill?`img/i/${pg3(l.ill)}.webp`:`img/p/${pg3(l.p[0])}.webp`}
+function coverOf(l){return l.ill?`i/${pg3(l.ill)}.webp`:`${pg3(l.p[0])}.webp`}
 function renderHome(){
   const done=LS.filter(l=>isDone(l.id)).length;
   $("#sub0").textContent=`${AR(LS.length)} درساً ومحفوظة · أنجزت ${AR(done)}`;
@@ -1282,11 +1282,11 @@ function drawMem(){
   $("#rcl").onclick=()=>{CT="read";CI=0;drawTabs();RES={};const s=LL(id);s.r=[];s.done=0;drawRead(true);const l=$("#live");l&&(l.dataset.rc=1);window.__recite=id};
 }
 /* ===== الصفحات ===== */
-function drawPages(){ob.innerHTML=`<p class="hint">صفحات الكتاب لهذا الدرس</p>`+CUR.p.map(n=>`<img class="pgimg" loading="lazy" src="img/p/${pg3(n)}.webp" alt="صفحة ${n}">`).join("")+`<div class="row"><button class="ghost" id="ob2" data-snd="flip">${ic("pages",20)} افتح في الكتاب</button></div>`;$("#ob2").onclick=()=>openBook(CUR.p[0])}
+function drawPages(){ob.innerHTML=`<p class="hint">صفحات الكتاب لهذا الدرس</p>`+CUR.p.map(n=>`<img class="pgimg" loading="lazy" src="${pg3(n)}.webp" alt="صفحة ${n}">`).join("")+`<div class="row"><button class="ghost" id="ob2" data-snd="flip">${ic("pages",20)} افتح في الكتاب</button></div>`;$("#ob2").onclick=()=>openBook(CUR.p[0])}
 /* ===== الكتاب ===== */
 let BP=1;const bk=$("#bk");
 function openBook(n){BP=n||1;bk.classList.add("on");bk.setAttribute("aria-hidden","false");drawBook()}
-function drawBook(){BP=Math.max(1,Math.min(144,BP));$("#bim").src=`img/p/${pg3(BP)}.webp`;$("#bpg").textContent="صفحة "+AR(BP)+" / "+AR(144);const l=LS.find(l=>l.p.includes(BP));$("#bt").textContent=l?l.t:"الكتاب"}
+function drawBook(){BP=Math.max(1,Math.min(144,BP));$("#bim").src=`${pg3(BP)}.webp`;$("#bpg").textContent="صفحة "+AR(BP)+" / "+AR(144);const l=LS.find(l=>l.p.includes(BP));$("#bt").textContent=l?l.t:"الكتاب"}
 $("#bn2").innerHTML=ic("cl",26);$("#bp2").innerHTML=ic("cr",26);
 $("#bn2").onclick=()=>{BP++;drawBook()};$("#bp2").onclick=()=>{BP--;drawBook()};
 $("#bx").onclick=()=>{bk.classList.remove("on");bk.setAttribute("aria-hidden","true")};
